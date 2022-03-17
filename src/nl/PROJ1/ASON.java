@@ -1,3 +1,5 @@
+package nl.PROJ1;
+
 import java.io.*;
 
 public class ASON {
@@ -47,7 +49,7 @@ public class ASON {
 
     public static boolean checkExist(String key, String value, String database) {
         try {
-            BufferedReader bufferdReader = new BufferedReader(new FileReader(database));
+            BufferedReader bufferdReader = new BufferedReader(new FileReader("ASON/" + database));
             String line = bufferdReader.readLine();
 
             while (line != null) {
@@ -69,7 +71,7 @@ public class ASON {
 
     public static boolean checkMatch(String key, String value, String key2, String value2, String database) {
         try {
-            BufferedReader bufferdReader = new BufferedReader(new FileReader(database));
+            BufferedReader bufferdReader = new BufferedReader(new FileReader("ASON/" + database));
             String line = bufferdReader.readLine();
 
             while (line != null) {
@@ -97,7 +99,7 @@ public class ASON {
 
     public static boolean checkMatch(String key, String value, String key2, String value2, String key3, String value3, String database) {
         try {
-            BufferedReader bufferdReader = new BufferedReader(new FileReader(database));
+            BufferedReader bufferdReader = new BufferedReader(new FileReader("ASON/" + database));
             String line = bufferdReader.readLine();
 
             while (line != null) {
