@@ -32,18 +32,8 @@ public class Login {
     }
 
     private static void promptLogin() {
-        System.out.println("");
-        Prompt.promptLine();
-        Prompt.promptLeftBorder();
-        System.out.println("");
-        Prompt.promptLeftBorder();
         System.out.println("Welkom bij examen centrum Quiz Master!");
-        Prompt.promptLeftBorder();
         System.out.println("Login met uw gebruikersnummer en wachtwoord. [0 = Exit]");
-        Prompt.promptLeftBorder();
-        System.out.println("");
-        Prompt.promptLine();
-
     }
 
     private static void askUsername() {
