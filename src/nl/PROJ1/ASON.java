@@ -1,6 +1,7 @@
 package nl.PROJ1;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class ASON {
     private static void makeValue(String key, String value, String database) {
@@ -130,5 +131,25 @@ public class ASON {
             e.printStackTrace();
         }
         return false;
+    }
+
+    public static ArrayList<String> stripValue(String key, String database){
+        ArrayList<String> list = new ArrayList<String>();
+        try {
+            BufferedReader bufferdReader = new BufferedReader(new FileReader("ASON/" + database));
+            String line = bufferdReader.readLine();
+
+            while (line != null) {
+                if (line.contains(key)) {
+                    String[] extraction = line.split(":");
+                    extraction = extraction[1].split("\"");
+                    list.add(extraction[1]);
+                }
+                line = bufferdReader.readLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 }
