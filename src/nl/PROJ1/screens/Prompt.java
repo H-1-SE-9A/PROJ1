@@ -17,8 +17,4 @@ public class Prompt {
     public static void promptLine() {
         System.out.println(ANSI_RED + "88888888 88888888 88888888 88888888 88888888 88888888 88888888 88888888 88888888 88888888 88888888 88888888 88888888 88888888" + ANSI_RESET);
     }
-
-    public static void promptLeftBorder(){
-        System.out.print(ANSI_RED + "8    " + ANSI_RESET);
-    }
 }
