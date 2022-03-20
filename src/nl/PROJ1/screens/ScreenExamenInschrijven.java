@@ -2,9 +2,9 @@ package nl.PROJ1.screens;
 
 import java.util.Scanner;
 
-public class ScreenInschrijven {
+public class ScreenExamenInschrijven {
 
-    public static int startScreenInschrijven() {
+    public static int startScreenExamenInschrijven() {
         System.out.println("1)    Inschrijven Examen 1\n2)   Inschrijven Examen 2\n3)    Inschrijven Examen 3\n4)    Inschrijven Examen 4\n 5) Log uit \n 0)    Exit\n\n Maak uw keuze: ");
 
         Scanner scanner = new Scanner(System.in);
