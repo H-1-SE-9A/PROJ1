@@ -10,13 +10,9 @@ public class ScreenInschrijven {
         Scanner scanner = new Scanner(System.in);
         int choise = scanner.nextInt();
 
-        switch (choise){
             // Voor alle keuzes die worden gemaakt moet in een tekst file opgeslagen worden waarvoor de student zich inschrijft
-            // Student kan nu in
-
-            default -> {System.out.println("Ongeldige keuze!");}
-
-        }
+            // Student kan nu in een ander scherm beginnen met het examen
+            // Student kan zich maar 1 keer inschrijven voor een examen
 
         //inschrijvenExamen(int gebruikerNummer)
 

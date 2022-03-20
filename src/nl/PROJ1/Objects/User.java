@@ -10,6 +10,7 @@ public class User {
     private String achternaam;
     ArrayList<String> examenlijst = new ArrayList<>();
     ArrayList<String> examenResultaten = new ArrayList<>();
+    ArrayList<String> ingeschrevenExamens = new ArrayList<>();
 
     public User(String gebruikersnummer) {
         this.gebruikersnummer = gebruikersnummer;
@@ -30,6 +31,10 @@ public class User {
                 examenResultaten.add(x.get(i));
                 x = ASON.stripValue("Resultaat2", "Userinformation");
                 examenResultaten.add(x.get(i));
+                x = ASON.stripValue("Ingeschreven1", "Userinformation");
+                ingeschrevenExamens.add(x.get(i));
+                x = ASON.stripValue("Ingeschreven2", "Userinformation");
+                ingeschrevenExamens.add(x.get(i));
                 //System.out.println(voornaam + " " + achternaam);
                 //System.out.println(examenlijst);
                 //System.out.println(examenResultaten);
@@ -38,6 +43,6 @@ public class User {
     }
 
     //Methode getCijfers();
-    //Methode getIngeschrevenExamens();
+    //Methode getIngeschrevenExamens(); - arraylist met resultaten en voor welke examens ben je ingeschreven
     //Methode
 }
