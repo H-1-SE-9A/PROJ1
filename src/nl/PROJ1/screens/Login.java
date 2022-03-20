@@ -1,6 +1,7 @@
 package nl.PROJ1.screens;
 
 import nl.PROJ1.ASON;
+import nl.PROJ1.Objects.User;
 
 import java.util.Objects;
 import java.util.Scanner;
@@ -9,6 +10,7 @@ public class Login {
     private static Scanner scanner;
     private static String username = "";
     private static String password = "";
+    private static User user;
 
     public static int startLogin() {
         promptLogin();
@@ -22,10 +24,12 @@ public class Login {
             }
         }
         if (ASON.checkMatch("Username", username, "Password", password, "Admin", "true", "UsersDatabase")) {
+            user = makeUser();
             username = "";
             password = "";
             return 3;
         }
+        user = makeUser();
         username = "";
         password = "";
         return 2;
@@ -46,5 +50,8 @@ public class Login {
         scanner = new Scanner(System.in);
         System.out.println("wachtwoord: ");
         password = scanner.nextLine();
+    }
+    private static User makeUser(){
+        return new User(username);
     }
 }
