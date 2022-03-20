@@ -16,9 +16,13 @@ public class Login {
         promptLogin();
         while (!ASON.checkMatch("Username", username, "Password", password, "UsersDatabase")) {
             askUsername();
-            if(Objects.equals(username, "0")){return 0;}
+            if (Objects.equals(username, "0")) {
+                return 0;
+            }
             askPassword();
-            if(Objects.equals(password, "0")){return 0;}
+            if (Objects.equals(password, "0")) {
+                return 0;
+            }
             if (!ASON.checkMatch("Username", username, "Password", password, "UsersDatabase")) {
                 System.out.println("gebruikersnummer en/of wachtwoord fout");
             }
@@ -29,6 +33,7 @@ public class Login {
             password = "";
             return 3;
         }
+
         user = makeUser();
         username = "";
         password = "";
