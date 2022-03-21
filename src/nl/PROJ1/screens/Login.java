@@ -10,7 +10,7 @@ public class Login {
     private static Scanner scanner;
     private static String username = "";
     private static String password = "";
-    private static User user;
+    public static User user;
 
     public static int startLogin() {
 

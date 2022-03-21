@@ -63,6 +63,7 @@ public class ASON {
 
                     }
                 }
+                line = bufferdReader.readLine();
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -133,8 +134,8 @@ public class ASON {
         return false;
     }
 
-    public static ArrayList<String> stripValue(String key, String database){
-        ArrayList<String> list = new ArrayList<String>();
+    public static ArrayList<String> stripValue(String key, String database) {
+        ArrayList<String> list = new ArrayList<>();
         try {
             BufferedReader bufferdReader = new BufferedReader(new FileReader("ASON/" + database));
             String line = bufferdReader.readLine();
@@ -151,5 +152,91 @@ public class ASON {
             e.printStackTrace();
         }
         return list;
+    }
+
+    private static void copyTempTo(String database) {
+        try {
+            FileWriter fileWriter = new FileWriter("ASON/" + database);
+            BufferedReader bufferdReader = new BufferedReader(new FileReader("ASON/temp"));
+            String line = bufferdReader.readLine();
+            while (line != null) {
+                fileWriter.append(line);
+                fileWriter.append("\n");
+                line = bufferdReader.readLine();
+            }
+            fileWriter.close();
+        } catch (
+                IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void addKey(String key, String database) {
+        try {
+            FileWriter fileWriter = new FileWriter("ASON/temp");
+            BufferedReader bufferdReader = new BufferedReader(new FileReader("ASON/" + database));
+            String line = bufferdReader.readLine();
+            while (line != null) {
+                if (line.isBlank()) {
+                    fileWriter.append(String.format("\"%s\":\"Null\",%n", key));
+                    fileWriter.append("\n");
+                } else {
+                    fileWriter.append(line);
+                    fileWriter.append("\n");
+                }
+                line = bufferdReader.readLine();
+            }
+            fileWriter.close();
+        } catch (
+                IOException e) {
+            e.printStackTrace();
+        }
+        copyTempTo(database);
+    }
+
+    public static void changeValue(String privateKey, String keyValue, String key, String value, String database) {
+        try {
+            FileWriter fileWriter = new FileWriter("ASON/temp");
+            BufferedReader bufferdReader = new BufferedReader(new FileReader("ASON/" + database));
+            String line = bufferdReader.readLine();
+            while (line != null) {
+                if (line.contains(privateKey)) {
+                    String[] extraction = line.split(":");
+                    extraction = extraction[1].split("\"");
+                    if (extraction[1].equals(keyValue)) {
+                        fileWriter.append(line);
+                        fileWriter.append("\n");
+                        line = bufferdReader.readLine();
+                        while (!line.isBlank()) {
+                            if(line.contains(key)){
+                                fileWriter.append(String.format("\"%s\":\"%s\",%n", key,value));
+                                line = bufferdReader.readLine();
+                                if(line == null){
+                                    break;
+                                }
+                            }
+                            fileWriter.append(line);
+                            fileWriter.append("\n");
+                            line = bufferdReader.readLine();
+                            if(line == null){
+                                break;
+                            }
+                        }
+                    }
+                }
+                if(line == null){
+                    break;
+                }
+                fileWriter.append(line);
+                fileWriter.append("\n");
+
+                line = bufferdReader.readLine();
+            }
+            fileWriter.close();
+        } catch (
+                IOException e) {
+            e.printStackTrace();
+        }
+        copyTempTo(database);
     }
 }
