@@ -8,7 +8,7 @@ public class User {
     private String gebruikersnummer;
     private String voornaam;
     private String achternaam;
-    public ArrayList<String> ingeschrevenExamens = new ArrayList<>();
+    public static ArrayList<String> ingeschrevenExamens = new ArrayList<>();
     public ArrayList<String> examenResultaten = new ArrayList<>();
 
     public User(String gebruikersnummer) {
@@ -43,11 +43,11 @@ public class User {
             //count++;
     }
     // returnt nu de examens uit Userinformation ("Examen1", "Examen2")
-    public ArrayList<String> getIngeschrevenExamens(){
+    public static ArrayList<String> getIngeschrevenExamens(){
         return ingeschrevenExamens;
     }
     // returnt ArrayList alleExamens met alle examens uit database ExamenLijsten
-    public ArrayList<String>getAlleExamens(){
+    public static ArrayList<String>getAlleExamens(){
         ArrayList<String> alleExamens;
         alleExamens = ASON.stripValue("Examen", "Examenlijsten");
         return alleExamens;

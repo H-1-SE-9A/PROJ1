@@ -2,18 +2,21 @@
 "Voornaam":"Arthur",
 "Achternaam":"Djamardzhashvili",
 "Examen1": "ExamenScrum",
-"Ingeschreven1": "True",
 "Resultaat1" : "8",
 "Examen2": "ExamenOPT1",
-"Ingeschreven2": "True",
 "Resultaat2" : "Null",
 
 "Gebruikersnummer":"21101043",
 "Voornaam":"Alex",
 "Achternaam":"van Unen",
-"Examen1": "ExamenScrum",
-"Ingeschreven1": "True",
-"Resultaat1" : "6",
-"Examen2": "ExamenOPT1",
-"Ingeschreven2": "False",
-"Resultaat2" : "Null",
+
+
+"Gebruikersnummer":"20130597",
+"Voornaam":"Lionel",
+"Achternaam":"Mohanisngh",
+"Examen1":"ExamenScrum",
+"Resultaat1":"Null",
+
+"Examen4":"ExamenOPT3",
+"Resultaat4":"Null",
+
