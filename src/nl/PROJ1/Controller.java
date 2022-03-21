@@ -2,15 +2,21 @@ package nl.PROJ1;
 
 import nl.PROJ1.screens.*;
 
+import java.util.Scanner;
+
 public class Controller {
 
-    private static int screenNumber = 1;
+    private static int screenNumber = 9;
 
     public static void start() {
+
         Prompt.promptLine();
         Prompt.promptLogo();
         checkScreen();
+
     }
+
+
 
     private static void checkScreen() {
 
@@ -21,9 +27,22 @@ public class Controller {
             case 3 -> screenAdminPortal();
 //            case 4 -> screenResultaten();
 //            case 5 -> screenVoortgang();
-            case 6 -> screenInschrijven();
+            case 6 -> screenExamenInschrijven();
 //            case 7 -> screenMakenToets();
+            case 8 -> screenRegister();
+            case 9 -> screenStart();
         }
+    }
+    private static void screenStart(){
+        screenNumber = Start.startScreen();
+        Prompt.promptLine();
+        checkScreen();
+
+    }
+    private static void screenRegister() {
+        screenNumber = Register.startRegister();
+        Prompt.promptLine();
+        checkScreen();
     }
 
     private static void screenLogin() {
@@ -44,8 +63,8 @@ public class Controller {
         checkScreen();
     }
 
-    private static void screenInschrijven() {
-        screenNumber = ScreenInschrijven.startScreenInschrijven();
+    private static void screenExamenInschrijven() {
+        screenNumber = ScreenExamenInschrijven.startScreenExamenInschrijven();
         Prompt.promptLine();
         checkScreen();
     }
