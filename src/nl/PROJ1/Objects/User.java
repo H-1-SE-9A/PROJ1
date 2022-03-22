@@ -10,14 +10,17 @@ public class User {
     private String achternaam;
     public ArrayList<String> ingeschrevenExamens = new ArrayList<>();
     public ArrayList<String> examenResultaten = new ArrayList<>();
+    ArrayList<String> examenlijst = new ArrayList<>();
+    ArrayList<String> examenResultaten = new ArrayList<>();
+    ArrayList<String> ingeschrevenExamens = new ArrayList<>();
 
     public User(String gebruikersnummer) {
         this.gebruikersnummer = gebruikersnummer;
         ArrayList<String> x;
         x = ASON.stripValue("Gebruikersnummer", "UserInformation");
         //System.out.println(x.get(1));
-        for(int i = 0; i < x.size(); i++){
-            if (x.get(i).equals(gebruikersnummer)){
+        for (int i = 0; i < x.size(); i++) {
+            if (x.get(i).equals(gebruikersnummer)) {
                 x = ASON.stripValue("Voornaam", "Userinformation");
                 voornaam = x.get(i);
                 x = ASON.stripValue("Achternaam", "Userinformation");
