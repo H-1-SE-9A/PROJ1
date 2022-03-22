@@ -1,13 +1,12 @@
 package nl.PROJ1.screens;
 
 import nl.PROJ1.ASON;
-import nl.PROJ1.Objects.Examen;
 import nl.PROJ1.Objects.User;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ScreenInschrijven {
+public class InschrijvenExamen {
 
     static ArrayList<String> alleExamens = User.getAlleExamens();
     static ArrayList<String> ingeschrevenExamens = User.getIngeschrevenExamens();
@@ -30,36 +29,40 @@ public class ScreenInschrijven {
                 return 0;
             }
             case 1 -> {
-                if (ASON.checkMatch("Examen1", "ExamenScrum", "Resultaat1", "Null", "UserInformation")) {
+                if (ASON.getValue("Gebruikersnummer", Login.user.getGebruikersnummer(), "Ingeschreven1", "UserInformation").equals("True")) {
                     System.out.println("Je bent al ingeschreven voor dit examen!");
+                    return 6;
                 }
                 else {
-                    ASON.makeObject("Examen1", "ExamenScrum", "Resultaat1", "Null", "Userinformation");
+                    ASON.changeValue("Gebruikersnummer", Login.user.getGebruikersnummer(), "Ingeschreven1", "True", "Userinformation");
                 }
             }
             case 2 -> {
-                if (ASON.checkMatch("Examen2", "ExamenOPT1", "Resultaat2", "Null", "UserInformation")) {
+                if (ASON.getValue("Gebruikersnummer", Login.user.getGebruikersnummer(), "Ingeschreven2", "UserInformation").equals("True")) {
                     System.out.println("Je bent al ingeschreven voor dit examen!");
+                    return 6;
                 }
                 else {
-                    ASON.makeObject("Examen2", "ExamenOPT1", "Resultaat2", "Null", "Userinformation");
+                    ASON.changeValue("Gebruikersnummer", Login.user.getGebruikersnummer(), "Ingeschreven2", "True", "Userinformation");
                 }
             }
             case 3 -> {
-                if (ASON.checkMatch("Examen3", "ExamenOPT2", "Resultaat3", "Null", "UserInformation")) {
+                if (ASON.getValue("Gebruikersnummer", Login.user.getGebruikersnummer(), "Ingeschreven3", "UserInformation").equals("True")) {
                     System.out.println("Je bent al ingeschreven voor dit examen!");
+                    return 6;
                 }
                 else {
-                    ASON.makeObject("Examen3", "ExamenOPT2", "Resultaat3", "Null", "Userinformation");
+                    ASON.changeValue("Gebruikersnummer", Login.user.getGebruikersnummer(), "Ingeschreven3", "True", "Userinformation");
                 }
             }
 
             case 4 -> {
-                if (ASON.checkMatch("Examen4", "ExamenOPT3", "Resultaat4", "Null", "UserInformation")) {
+                if (ASON.getValue("Gebruikersnummer", Login.user.getGebruikersnummer(), "Ingeschreven4", "UserInformation").equals("True")) {
                     System.out.println("Je bent al ingeschreven voor dit examen!");
+                    return 6;
                 }
                 else {
-                    ASON.makeObject("Examen4", "ExamenOPT3", "Resultaat4", "Null", "Userinformation");
+                    ASON.changeValue("Gebruikersnummer", Login.user.getGebruikersnummer(), "Ingeschreven4", "True", "Userinformation");
                 }
             }
             case 5 -> {

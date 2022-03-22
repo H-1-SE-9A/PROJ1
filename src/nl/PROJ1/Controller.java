@@ -2,8 +2,6 @@ package nl.PROJ1;
 
 import nl.PROJ1.screens.*;
 
-import java.util.Scanner;
-
 public class Controller {
 
     private static int screenNumber = 9;
@@ -64,13 +62,13 @@ public class Controller {
     }
 
     private static void screenExamenInschrijven() {
-        screenNumber = ScreenExamenInschrijven.startScreenExamenInschrijven();
+        screenNumber = InschrijvenExamen.startScreenInschrijven();
         Prompt.promptLine();
         checkScreen();
     }
 
     private static void screenInschrijven() {
-        screenNumber = ScreenExamenInschrijven.startScreenExamenInschrijven();
+        screenNumber = InschrijvenExamen.startScreenInschrijven();
         Prompt.promptLine();
         checkScreen();
     }
