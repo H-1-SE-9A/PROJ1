@@ -211,7 +211,7 @@ public class ASON {
                             if(line.contains(key)){
                                 fileWriter.append(String.format("\"%s\":\"%s\",%n", key,value));
                                 line = bufferdReader.readLine();
-                                if(line == null){
+                                if(line == null || line.isBlank()){
                                     break;
                                 }
                             }
