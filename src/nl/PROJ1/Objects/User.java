@@ -10,6 +10,7 @@ public class User {
     private String achternaam;
     public static ArrayList<String> ingeschrevenExamens = new ArrayList<>();
     public static ArrayList<String> examenResultaten = new ArrayList<>();
+    public static ArrayList<String> isStudentIngeschreven = new ArrayList<>();
 
     public User(String gebruikersnummer) {
         this.gebruikersnummer = gebruikersnummer;
@@ -37,6 +38,14 @@ public class User {
                 examenResultaten.add(x.get(i));
                 x = ASON.stripValue("Resultaat4", "Userinformation");
                 examenResultaten.add(x.get(i));
+                x = ASON.stripValue("Ingeschreven1", "Userinformation");
+                isStudentIngeschreven.add(x.get(i));
+                x = ASON.stripValue("Ingeschreven2", "Userinformation");
+                isStudentIngeschreven.add(x.get(i));
+                x = ASON.stripValue("Ingeschreven3", "Userinformation");
+                isStudentIngeschreven.add(x.get(i));
+                x = ASON.stripValue("Ingeschreven4", "Userinformation");
+                isStudentIngeschreven.add(x.get(i));
             }
         }
     }
@@ -50,10 +59,17 @@ public class User {
         return ingeschrevenExamens;
     }
 
+    public static ArrayList<String> getIsStudentIngeschreven(){
+        return isStudentIngeschreven;
+    }
+
     // returnt ArrayList alleExamens met alle examens uit database ExamenLijsten
     public ArrayList<String>getAlleExamens(){
         ArrayList<String> alleExamens;
         alleExamens = ASON.stripValue("Examen", "Examenlijsten");
         return alleExamens;
+    }
+    public String getGebruikersnummer(){
+        return gebruikersnummer;
     }
 }

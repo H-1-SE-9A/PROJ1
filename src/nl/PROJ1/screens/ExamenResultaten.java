@@ -7,10 +7,12 @@ import java.util.Scanner;
 public class ExamenResultaten {
     public static ArrayList<String> ingeschrevenExamens = User.getIngeschrevenExamens();
     public static ArrayList<String> examenResultaten = User.getResultaten();
+    public static ArrayList<String> isStudentIngeschreven = User.getIsStudentIngeschreven();
 
-    public ExamenResultaten(ArrayList<String> ingeschrevenExamens, ArrayList<String> examenResultaten){
+    public ExamenResultaten(ArrayList<String> ingeschrevenExamens, ArrayList<String> examenResultaten, ArrayList<String> isStudentIngeschreven){
         this.ingeschrevenExamens = ingeschrevenExamens;
         this.examenResultaten = examenResultaten;
+        this.isStudentIngeschreven = isStudentIngeschreven;
 
     }
     public static int startExamenResultaten() {
