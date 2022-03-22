@@ -70,7 +70,7 @@ public class Controller {
     }
 
     private static void screenInschrijven() {
-        screenNumber = ScreenInschrijven.startScreenInschrijven();
+        screenNumber = ScreenExamenInschrijven.startScreenExamenInschrijven();
         Prompt.promptLine();
         checkScreen();
     }
