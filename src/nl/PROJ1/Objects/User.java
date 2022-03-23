@@ -64,7 +64,7 @@ public class User {
     }
 
     // returnt ArrayList alleExamens met alle examens uit database ExamenLijsten
-    public ArrayList<String>getAlleExamens(){
+    public static ArrayList<String>getAlleExamens(){
         ArrayList<String> alleExamens;
         alleExamens = ASON.stripValue("Examen", "Examenlijsten");
         return alleExamens;

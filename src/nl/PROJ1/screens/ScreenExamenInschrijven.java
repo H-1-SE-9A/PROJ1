@@ -7,7 +7,7 @@ import nl.PROJ1.Objects.User;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ScreenInschrijven {
+public class ScreenExamenInschrijven {
 
     static ArrayList<String> alleExamens = User.getAlleExamens();
     static ArrayList<String> ingeschrevenExamens = User.getIngeschrevenExamens();
@@ -17,7 +17,7 @@ public class ScreenInschrijven {
     String examen3 = "ExamenOPT2";
     String examen4 = "ExamenOPT3";
 
-    public static int startScreenInschrijven() {
+    public static int startScreenExamenInschrijven() {
         System.out.println("1)    Inschrijven ExamenScrum\n2)    Inschrijven ExamenOPT1 2\n3)    Inschrijven ExamenOPT2 3\n4)    Inschrijven ExamenOPT3\n5)    Log uit \n0)    Exit\n\n Maak uw keuze: )");
 
         Scanner scanner = new Scanner(System.in);
@@ -75,5 +75,6 @@ public class ScreenInschrijven {
 
         return 2;
     }
+
 
 }
