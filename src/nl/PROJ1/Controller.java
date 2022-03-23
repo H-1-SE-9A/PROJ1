@@ -29,8 +29,16 @@ public class Controller {
 //            case 7 -> screenMakenToets();
             case 8 -> screenRegister();
             case 9 -> screenStart();
+            case 10 -> screenAdminStudentInschrijven();
         }
     }
+
+    private static void screenAdminStudentInschrijven() {
+        screenNumber = AdminStudentInschrijven.start();
+        Prompt.promptLine();
+        checkScreen();
+    }
+
     private static void screenStart(){
         screenNumber = Start.startScreen();
         Prompt.promptLine();
