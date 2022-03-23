@@ -30,7 +30,14 @@ public class Controller {
             case 8 -> screenRegister();
             case 9 -> screenStart();
             case 10 -> screenAdminStudentInschrijven();
+            case 11 -> examenAfnemen();
         }
+    }
+
+    private static void examenAfnemen() {
+        screenNumber = ExamenAfnemen.start();
+        Prompt.promptLine();
+        checkScreen();
     }
 
     private static void screenAdminStudentInschrijven() {
