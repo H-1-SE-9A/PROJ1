@@ -10,16 +10,20 @@ public class Login {
     private static Scanner scanner;
     private static String username = "";
     private static String password = "";
-    private static User user;
+    public static User user;
 
     public static int startLogin() {
 
         promptLogin();
         while (!ASON.checkMatch("Username", username, "Password", password, "UsersDatabase")) {
             askUsername();
-            if(Objects.equals(username, "0")){return 0;}
+            if (Objects.equals(username, "0")) {
+                return 0;
+            }
             askPassword();
-            if(Objects.equals(password, "0")){return 0;}
+            if (Objects.equals(password, "0")) {
+                return 0;
+            }
             if (!ASON.checkMatch("Username", username, "Password", password, "UsersDatabase")) {
                 System.out.println("gebruikersnummer en/of wachtwoord fout");
             }
@@ -30,6 +34,7 @@ public class Login {
             password = "";
             return 3;
         }
+
         user = makeUser();
         username = "";
         password = "";

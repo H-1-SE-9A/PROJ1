@@ -25,7 +25,7 @@ public class Controller {
             case 1 -> screenLogin();
             case 2 -> screenUserPortal();
             case 3 -> screenAdminPortal();
-//            case 4 -> screenResultaten();
+            case 4 -> screenResultaten();
 //            case 5 -> screenVoortgang();
             case 6 -> screenExamenInschrijven();
 //            case 7 -> screenMakenToets();
@@ -73,6 +73,17 @@ public class Controller {
 
     private static void screenExamenInschrijven() {
         screenNumber = ScreenExamenInschrijven.startScreenExamenInschrijven();
+        Prompt.promptLine();
+        checkScreen();
+    }
+
+    private static void screenInschrijven() {
+        screenNumber = ScreenExamenInschrijven.startScreenExamenInschrijven();
+        Prompt.promptLine();
+        checkScreen();
+    }
+    private static void screenResultaten() {
+        screenNumber = ExamenResultaten.startExamenResultaten();
         Prompt.promptLine();
         checkScreen();
     }
