@@ -19,7 +19,7 @@ public class AdminPortal {
                 return 5;
             }
             case 3 -> {
-                return 6;
+                return 10;
             }
             case 4 -> {
                 return 1;
