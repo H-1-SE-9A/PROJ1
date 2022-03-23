@@ -17,12 +17,29 @@ public class InschrijvenExamen {
     String examen4 = "ExamenOPT3";
 
     public static int startScreenInschrijven() {
-        System.out.println("1)    Inschrijven ExamenScrum\n2)    Inschrijven ExamenOPT1 2\n3)    Inschrijven ExamenOPT2 3\n4)    Inschrijven ExamenOPT3\n5)    Log uit \n0)    Exit\n\n Maak uw keuze: )");
+
+        System.out.println("Inschrijven Examen");
+        if(ASON.getValue("Gebruikersnummer", Login.user.getGebruikersnummer(), "Ingeschreven1", "UserInformation").equals("False")) {
+            System.out.println("1)    Inschrijven ExamenScrum");
+        }
+        if(ASON.getValue("Gebruikersnummer", Login.user.getGebruikersnummer(), "Ingeschreven2", "UserInformation").equals("False")) {
+            System.out.println("2)    Inschrijven ExamenOPT1");
+        }
+        if(ASON.getValue("Gebruikersnummer", Login.user.getGebruikersnummer(), "Ingeschreven3", "UserInformation").equals("False")) {
+            System.out.println("3)    Inschrijven ExamenOPT2");
+        }
+        if(ASON.getValue("Gebruikersnummer", Login.user.getGebruikersnummer(), "Ingeschreven4", "UserInformation").equals("False")) {
+            System.out.println("4)    Inschrijven ExamenOPT3");
+        }
+        System.out.println("5)    Terug");
+        System.out.println("6)    Log uit");
+        System.out.println("0)    Exit");
+        System.out.println("");
+        System.out.println("Maak uw keuze: ");
 
         Scanner scanner = new Scanner(System.in);
         int choise = scanner.nextInt();
 
-        // Toevoegen aan UserInformation werkt, nu moet hij aan het juiste gebruikersnummer worden gekoppeld
 
         switch (choise) {
             case 0 -> {
@@ -35,6 +52,8 @@ public class InschrijvenExamen {
                 }
                 else {
                     ASON.changeValue("Gebruikersnummer", Login.user.getGebruikersnummer(), "Ingeschreven1", "True", "Userinformation");
+                    System.out.println("Je bent nu ingeschreven voor dit examen!");
+                    return 6;
                 }
             }
             case 2 -> {
@@ -44,6 +63,8 @@ public class InschrijvenExamen {
                 }
                 else {
                     ASON.changeValue("Gebruikersnummer", Login.user.getGebruikersnummer(), "Ingeschreven2", "True", "Userinformation");
+                    System.out.println("Je bent nu ingeschreven voor dit examen!");
+                    return 6;
                 }
             }
             case 3 -> {
@@ -53,6 +74,8 @@ public class InschrijvenExamen {
                 }
                 else {
                     ASON.changeValue("Gebruikersnummer", Login.user.getGebruikersnummer(), "Ingeschreven3", "True", "Userinformation");
+                    System.out.println("Je bent nu ingeschreven voor dit examen!");
+                    return 6;
                 }
             }
 
@@ -63,18 +86,18 @@ public class InschrijvenExamen {
                 }
                 else {
                     ASON.changeValue("Gebruikersnummer", Login.user.getGebruikersnummer(), "Ingeschreven4", "True", "Userinformation");
+                    System.out.println("Je bent nu ingeschreven voor dit examen!");
+                    return 6;
                 }
             }
             case 5 -> {
+                return 2;
+            }
+            case 6 -> {
                 return 1;
             }
             default -> System.out.println("Ongeldige keuze!");
         }
-
-            // Voor alle keuzes die worden gemaakt moet in een tekst file opgeslagen worden waarvoor de student zich inschrijft
-            // Student kan nu in een ander scherm beginnen met het examen
-            // Student kan zich maar 1 keer inschrijven voor een examen
-
 
         return 2;
     }
