@@ -1,20 +1,64 @@
 "Gebruikersnummer":"19043058",
 "Achternaam":"Djamardzhashvili",
 "Examen1": "ExamenScrum",
-"Resultaat1":"9.8",
+"Ingeschreven1": "True",
+"Resultaat1":"6",
 "Examen2": "ExamenOPT1",
+<<<<<<< HEAD
 "Resultaat2":"SCROTUMEXAMEN",
 "Examen3":"OPT8",
+=======
+"Ingeschreven1": "True",
+"Resultaat2":"7",
+"Examen3": "ExamenOPT2",
+"Ingeschreven1": "True",
+"Resultaat3":"8",
+"Examen4": "ExamenOPT3",
+"Ingeschreven1": "True",
+"Resultaat4":"null",
+
+>>>>>>> origin/karam
 
 "Gebruikersnummer":"21101043",
-"Voornaam":"HOMO",
+"Voornaam":"Alex",
 "Achternaam":"van Unen",
+<<<<<<< HEAD
 "Examen3":"OPT8",
+=======
+"Examen1": "ExamenScrum",
+"Ingeschreven1": "True",
+"Resultaat1":"6",
+"Examen2": "ExamenOPT1",
+"Ingeschreven1": "True",
+"Resultaat2":"7",
+"Examen3": "ExamenOPT2",
+"Ingeschreven1": "True",
+"Resultaat3":"8",
+"Examen4": "ExamenOPT3",
+"Ingeschreven1": "True",
+"Resultaat4":"null",
+>>>>>>> origin/karam
 
 "Gebruikersnummer":"20130597",
 "Voornaam":"Lionel",
 "Achternaam":"Mohanisngh",
+<<<<<<< HEAD
 "Examen1":"test",
 "Resultaat1":"KANKEROP",
 "Examen3":"OPT8",
+=======
+"Examen1": "ExamenScrum",
+"Ingeschreven1": "True",
+"Resultaat1":"6",
+"Examen2": "ExamenOPT1",
+"Ingeschreven1": "True",
+"Resultaat2":"7",
+"Examen3": "ExamenOPT2",
+"Ingeschreven1": "True",
+"Resultaat3":"8",
+"Examen4": "ExamenOPT3",
+"Ingeschreven1": "True",
+"Resultaat4":"null",
+
+>>>>>>> origin/karam
 

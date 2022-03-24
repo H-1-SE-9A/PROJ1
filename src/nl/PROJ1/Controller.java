@@ -19,17 +19,48 @@ public class Controller {
             case 1 -> screenLogin();
             case 2 -> screenUserPortal();
             case 3 -> screenAdminPortal();
-//            case 4 -> screenResultaten();
+            case 4 -> screenResultaten();
 //            case 5 -> screenVoortgang();
             case 6 -> screenInschrijven();
 //            case 7 -> screenMakenToets();
             case 8 -> screenRegister();
             case 9 -> screenStart();
+<<<<<<< HEAD
             case 10 -> screenIsStudentGeslaagd();
             case 11 -> screenGehaaldeExamens();
             case 12 -> screenScorebord();
         }
     }
+=======
+            case 10 -> screenAdminStudentInschrijven();
+            case 11 -> examenAfnemen();
+        }
+    }
+
+    private static void examenAfnemen() {
+        screenNumber = ExamenAfnemen.start();
+        Prompt.promptLine();
+        checkScreen();
+    }
+
+    private static void screenAdminStudentInschrijven() {
+        screenNumber = AdminStudentInschrijven.start();
+        Prompt.promptLine();
+        checkScreen();
+    }
+
+    private static void screenStart(){
+        screenNumber = Start.startScreen();
+        Prompt.promptLine();
+        checkScreen();
+
+    }
+    private static void screenRegister() {
+        screenNumber = Register.startRegister();
+        Prompt.promptLine();
+        checkScreen();
+    }
+>>>>>>> origin/karam
 
     private static void screenLogin() {
         screenNumber = Login.startLogin();
@@ -55,6 +86,7 @@ public class Controller {
         checkScreen();
     }
 
+<<<<<<< HEAD
     private static void screenRegister(){
 
     }
@@ -78,4 +110,16 @@ public class Controller {
         checkScreen();
     }
 
+=======
+    private static void screenInschrijven() {
+        screenNumber = ScreenExamenInschrijven.startScreenExamenInschrijven();
+        Prompt.promptLine();
+        checkScreen();
+    }
+    private static void screenResultaten() {
+        screenNumber = ExamenResultaten.startExamenResultaten();
+        Prompt.promptLine();
+        checkScreen();
+    }
+>>>>>>> origin/karam
 }

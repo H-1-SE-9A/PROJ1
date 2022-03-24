@@ -208,23 +208,23 @@ public class ASON {
                         fileWriter.append("\n");
                         line = bufferdReader.readLine();
                         while (!line.isBlank()) {
-                            if(line.contains(key)){
-                                fileWriter.append(String.format("\"%s\":\"%s\",%n", key,value));
+                            if (line.contains(key)) {
+                                fileWriter.append(String.format("\"%s\":\"%s\",%n", key, value));
                                 line = bufferdReader.readLine();
-                                if(line == null){
+                                if (line == null || line.isBlank()) {
                                     break;
                                 }
                             }
                             fileWriter.append(line);
                             fileWriter.append("\n");
                             line = bufferdReader.readLine();
-                            if(line == null){
+                            if (line == null) {
                                 break;
                             }
                         }
                     }
                 }
-                if(line == null){
+                if (line == null) {
                     break;
                 }
                 fileWriter.append(line);
@@ -238,5 +238,40 @@ public class ASON {
             e.printStackTrace();
         }
         copyTempTo(database);
+    }
+
+    public static String getValue(String privateKey, String keyValue, String key, String database) {
+        try {
+            BufferedReader bufferdReader = new BufferedReader(new FileReader("ASON/" + database));
+            String line = bufferdReader.readLine();
+            while (line != null) {
+                if (line.contains(privateKey)) {
+                    String[] extraction = line.split(":");
+                    extraction = extraction[1].split("\"");
+                    if (extraction[1].equals(keyValue)) {
+                        line = bufferdReader.readLine();
+                        while (!line.isBlank()) {
+                            if (line.contains(key)) {
+                                extraction = line.split(":");
+                                extraction = extraction[1].split("\"");
+                                return extraction[1];
+                            }
+                            line = bufferdReader.readLine();
+                            if (line == null) {
+                                break;
+                            }
+                        }
+                    }
+                }
+                if (line == null) {
+                    break;
+                }
+                line = bufferdReader.readLine();
+            }
+        } catch (
+                IOException e) {
+            e.printStackTrace();
+        }
+        return "Null";
     }
 }
