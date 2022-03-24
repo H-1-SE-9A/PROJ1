@@ -2,6 +2,7 @@ package nl.PROJ1.screens;
 
 import nl.PROJ1.ASON;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Register {
@@ -56,6 +57,8 @@ public class Register {
         }
     }
     private static void makeUser(){
-        ASON.makeObject("Username",username,"Password",password,"Admin","false","UsersDatabase");
+        ArrayList<String> gebruikernummers = ASON.stripValue("Username","UsersDatabase");
+        int gebruikernummer = Integer.parseInt(gebruikernummers.get(gebruikernummers.size()-1)) + 1;
+        ASON.makeObject("Username", String.valueOf(gebruikernummer),"Password",password,"Admin","false","UsersDatabase");
     }
 }

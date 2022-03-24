@@ -2,21 +2,15 @@ package nl.PROJ1;
 
 import nl.PROJ1.screens.*;
 
-import java.util.Scanner;
-
 public class Controller {
 
-    private static int screenNumber = 9;
+    private static int screenNumber = 1;
 
     public static void start() {
-
         Prompt.promptLine();
         Prompt.promptLogo();
         checkScreen();
-
     }
-
-
 
     private static void checkScreen() {
 
@@ -27,12 +21,34 @@ public class Controller {
             case 3 -> screenAdminPortal();
             case 4 -> screenResultaten();
 //            case 5 -> screenVoortgang();
-            case 6 -> screenExamenInschrijven();
+            case 6 -> screenInschrijven();
 //            case 7 -> screenMakenToets();
             case 8 -> screenRegister();
             case 9 -> screenStart();
+<<<<<<< HEAD
+            case 10 -> screenIsStudentGeslaagd();
+            case 11 -> screenGehaaldeExamens();
+            case 12 -> screenScorebord();
         }
     }
+=======
+            case 10 -> screenAdminStudentInschrijven();
+            case 11 -> examenAfnemen();
+        }
+    }
+
+    private static void examenAfnemen() {
+        screenNumber = ExamenAfnemen.start();
+        Prompt.promptLine();
+        checkScreen();
+    }
+
+    private static void screenAdminStudentInschrijven() {
+        screenNumber = AdminStudentInschrijven.start();
+        Prompt.promptLine();
+        checkScreen();
+    }
+
     private static void screenStart(){
         screenNumber = Start.startScreen();
         Prompt.promptLine();
@@ -44,6 +60,7 @@ public class Controller {
         Prompt.promptLine();
         checkScreen();
     }
+>>>>>>> origin/karam
 
     private static void screenLogin() {
         screenNumber = Login.startLogin();
@@ -63,12 +80,37 @@ public class Controller {
         checkScreen();
     }
 
-    private static void screenExamenInschrijven() {
+    private static void screenInschrijven() {
         screenNumber = ScreenExamenInschrijven.startScreenExamenInschrijven();
         Prompt.promptLine();
         checkScreen();
     }
 
+<<<<<<< HEAD
+    private static void screenRegister(){
+
+    }
+    private static void screenStart(){
+
+    }
+    private static void screenIsStudentGeslaagd(){
+        screenNumber = AdminIsStudentGeslaagd.startIsStudentGeslaagd();
+        Prompt.promptLine();
+        checkScreen();
+    }
+    private static void screenGehaaldeExamens(){
+        screenNumber = AdminGehaaldeExamens.gehaaldeExamens();
+        Prompt.promptLine();
+        checkScreen();
+        
+    }
+    private static void screenScorebord(){
+        screenNumber = AdminScoreBord.startSchermScorebord();
+        Prompt.promptLine();
+        checkScreen();
+    }
+
+=======
     private static void screenInschrijven() {
         screenNumber = ScreenExamenInschrijven.startScreenExamenInschrijven();
         Prompt.promptLine();
@@ -79,4 +121,5 @@ public class Controller {
         Prompt.promptLine();
         checkScreen();
     }
+>>>>>>> origin/karam
 }

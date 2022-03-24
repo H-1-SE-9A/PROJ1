@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+"Gebruikersnummer":"19043058",
+"Achternaam":"Djamardzhashvili",
+"Examen1": "ExamenScrum",
+"Resultaat1":"9.8",
+"Examen2": "ExamenOPT1",
+"Resultaat2":"SCROTUMEXAMEN",
+"Examen3":"OPT8",
+
+"Gebruikersnummer":"21101043",
+"Voornaam":"HOMO",
+"Achternaam":"van Unen",
+"Examen3":"OPT8",
+
+"Gebruikersnummer":"20130597",
+"Voornaam":"Lionel",
+"Achternaam":"Mohanisngh",
+"Examen1":"test",
+"Resultaat1":"KANKEROP",
+"Examen3":"OPT8",
+=======
 "Username":"0",
 "Password":"Welkom",
 "Admin":"true",
@@ -9,6 +30,7 @@
 "Username":"Fre",
 "Password":"WelkomFre",
 "Admin":"false",
+>>>>>>> origin/karam
 
 "Username":"21101043",
 "Password":"WelkomAlex",

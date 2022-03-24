@@ -8,16 +8,27 @@ public class User {
     private String gebruikersnummer;
     private String voornaam;
     private String achternaam;
+<<<<<<< HEAD
+    public ArrayList<String> ingeschrevenExamens = new ArrayList<>();
+    public ArrayList<String> examenResultaten = new ArrayList<>();
+=======
     public static ArrayList<String> ingeschrevenExamens = new ArrayList<>();
     public static ArrayList<String> examenResultaten = new ArrayList<>();
     public static ArrayList<String> isStudentIngeschreven = new ArrayList<>();
+>>>>>>> origin/karam
 
     public User(String gebruikersnummer) {
         this.gebruikersnummer = gebruikersnummer;
         ArrayList<String> x;
         x = ASON.stripValue("Gebruikersnummer", "UserInformation");
+<<<<<<< HEAD
+        //System.out.println(x.get(1));
+        for(int i = 0; i < x.size(); i++){
+            if (x.get(i).equals(gebruikersnummer)){
+=======
         for (int i = 0; i < x.size(); i++) {
             if (x.get(i).equals(gebruikersnummer)) {
+>>>>>>> origin/karam
                 x = ASON.stripValue("Voornaam", "Userinformation");
                 voornaam = x.get(i);
                 x = ASON.stripValue("Achternaam", "Userinformation");
@@ -64,7 +75,7 @@ public class User {
     }
 
     // returnt ArrayList alleExamens met alle examens uit database ExamenLijsten
-    public ArrayList<String>getAlleExamens(){
+    public static ArrayList<String>getAlleExamens(){
         ArrayList<String> alleExamens;
         alleExamens = ASON.stripValue("Examen", "Examenlijsten");
         return alleExamens;
