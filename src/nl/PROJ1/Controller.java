@@ -2,21 +2,15 @@ package nl.PROJ1;
 
 import nl.PROJ1.screens.*;
 
-import java.util.Scanner;
-
 public class Controller {
 
-    private static int screenNumber = 9;
+    private static int screenNumber = 1;
 
     public static void start() {
-
         Prompt.promptLine();
         Prompt.promptLogo();
         checkScreen();
-
     }
-
-
 
     private static void checkScreen() {
 
@@ -27,22 +21,14 @@ public class Controller {
             case 3 -> screenAdminPortal();
 //            case 4 -> screenResultaten();
 //            case 5 -> screenVoortgang();
-            case 6 -> screenExamenInschrijven();
+            case 6 -> screenInschrijven();
 //            case 7 -> screenMakenToets();
             case 8 -> screenRegister();
             case 9 -> screenStart();
+            case 10 -> screenIsStudentGeslaagd();
+            case 11 -> screenGehaaldeExamens();
+            case 12 -> screenScorebord();
         }
-    }
-    private static void screenStart(){
-        screenNumber = Start.startScreen();
-        Prompt.promptLine();
-        checkScreen();
-
-    }
-    private static void screenRegister() {
-        screenNumber = Register.startRegister();
-        Prompt.promptLine();
-        checkScreen();
     }
 
     private static void screenLogin() {
@@ -63,9 +49,33 @@ public class Controller {
         checkScreen();
     }
 
-    private static void screenExamenInschrijven() {
+    private static void screenInschrijven() {
         screenNumber = ScreenExamenInschrijven.startScreenExamenInschrijven();
         Prompt.promptLine();
         checkScreen();
     }
+
+    private static void screenRegister(){
+
+    }
+    private static void screenStart(){
+
+    }
+    private static void screenIsStudentGeslaagd(){
+        screenNumber = AdminIsStudentGeslaagd.startIsStudentGeslaagd();
+        Prompt.promptLine();
+        checkScreen();
+    }
+    private static void screenGehaaldeExamens(){
+        screenNumber = AdminGehaaldeExamens.gehaaldeExamens();
+        Prompt.promptLine();
+        checkScreen();
+        
+    }
+    private static void screenScorebord(){
+        screenNumber = AdminScoreBord.startSchermScorebord();
+        Prompt.promptLine();
+        checkScreen();
+    }
+
 }
