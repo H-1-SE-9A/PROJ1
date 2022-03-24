@@ -19,7 +19,6 @@ public class ExamenResultaten {
         System.out.println("1)    " + ingeschrevenExamens.get(0) +  "\n2)    " + ingeschrevenExamens.get(1) +  "\n3)    " + ingeschrevenExamens.get(2) +  "\n4)    " + ingeschrevenExamens.get(3) +  "\n5)    Logout\n0)    Exit\n\n Maak uw keuze: ");
         Scanner scanner = new Scanner(System.in);
         int choise = scanner.nextInt();
-
         switch (choise){
             case 0 -> {
                 return 0;
