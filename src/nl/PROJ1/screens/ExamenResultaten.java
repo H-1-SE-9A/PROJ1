@@ -13,7 +13,7 @@ public class ExamenResultaten {
         this.ingeschrevenExamens = ingeschrevenExamens;
         this.examenResultaten = examenResultaten;
         this.isStudentIngeschreven = isStudentIngeschreven;
-
+        //werkt nog niet
     }
     public static int startExamenResultaten() {
         System.out.println("1)    " + ingeschrevenExamens.get(0) +  "\n2)    " + ingeschrevenExamens.get(1) +  "\n3)    " + ingeschrevenExamens.get(2) +  "\n4)    " + ingeschrevenExamens.get(3) +  "\n5)    Logout\n0)    Exit\n\n Maak uw keuze: ");
