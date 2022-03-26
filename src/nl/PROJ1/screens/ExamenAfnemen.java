@@ -8,7 +8,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class ExamenAfnemen {
-    private static String examenNaam = "ExamenScrum";
+    private static String examenNaam;
 
     public static void setExamenNaam(String naam) {
         examenNaam = naam;
