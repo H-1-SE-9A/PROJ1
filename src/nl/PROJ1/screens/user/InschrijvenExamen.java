@@ -1,7 +1,8 @@
-package nl.PROJ1.screens;
+package nl.PROJ1.screens.user;
 
 import nl.PROJ1.ASON;
 import nl.PROJ1.Objects.User;
+import nl.PROJ1.screens.other.Login;
 
 import java.util.ArrayList;
 import java.util.Scanner;
