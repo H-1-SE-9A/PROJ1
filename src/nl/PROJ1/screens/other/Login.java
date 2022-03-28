@@ -1,4 +1,4 @@
-package nl.PROJ1.screens;
+package nl.PROJ1.screens.other;
 
 import nl.PROJ1.ASON;
 import nl.PROJ1.Objects.User;

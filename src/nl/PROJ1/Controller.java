@@ -1,6 +1,15 @@
 package nl.PROJ1;
 
-import nl.PROJ1.screens.*;
+import nl.PROJ1.screens.admin.AdminPortal;
+import nl.PROJ1.screens.admin.AdminStudentInschrijven;
+import nl.PROJ1.screens.other.Login;
+import nl.PROJ1.screens.other.Prompt;
+import nl.PROJ1.screens.other.Register;
+import nl.PROJ1.screens.other.Start;
+import nl.PROJ1.screens.user.ExamenAfnemen;
+import nl.PROJ1.screens.user.ExamenResultaten;
+import nl.PROJ1.screens.user.InschrijvenExamen;
+import nl.PROJ1.screens.user.UserPortal;
 
 public class Controller {
 

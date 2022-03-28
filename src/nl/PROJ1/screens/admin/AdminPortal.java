@@ -1,15 +1,14 @@
-package nl.PROJ1.screens;
+package nl.PROJ1.screens.admin;
 
 import java.util.Scanner;
 
-public class UserPortal {
-
-    public static int startUserPortal() {
-        System.out.println("1)    Resultaten\n2)    Voortgang\n3)    Inschrijven\n4)    Loguit\n0)    Exit\n\n Maak uw keuze: ");
+public class AdminPortal {
+    public static int startAdminPortal() {
+        System.out.println("1)    Resultaten\n2)    Voortgang\n3)    Student Inschrijven\n4)    Loguit\n0)    Exit\n Maak uw keuze: ");
         Scanner scanner = new Scanner(System.in);
         int choise = scanner.nextInt();
 
-        switch (choise){
+        switch (choise) {
             case 0 -> {
                 return 0;
             }
@@ -20,16 +19,14 @@ public class UserPortal {
                 return 5;
             }
             case 3 -> {
-                return 6;
+                return 10;
             }
             case 4 -> {
                 return 1;
             }
-            default -> {System.out.println("Ongeldige keuze!");}
+            default -> System.out.println("Ongeldige keuze!");
 
         }
         return 2;
     }
-
-
 }

@@ -47,6 +47,23 @@ public class ASON {
         makeValue(key3, value3, database);
         closeObject(database);
     }
+    public static void makeObject(String key1, String value1, String key2, String value2, String key3, String value3,String key4, String value4, String key5, String value5, String key6, String value6,String key7, String value7, String key8, String value8, String key9, String value9,String key10, String value10, String key11, String value11, String key12, String value12, String key13, String value13, String key14, String value14, String database) {
+        makeValue(key1, value1, database);
+        makeValue(key2, value2, database);
+        makeValue(key3, value3, database);
+        makeValue(key4, value4, database);
+        makeValue(key5, value5, database);
+        makeValue(key6, value6, database);
+        makeValue(key7, value7, database);
+        makeValue(key8, value8, database);
+        makeValue(key9, value9, database);
+        makeValue(key10, value10, database);
+        makeValue(key11, value11, database);
+        makeValue(key12, value12, database);
+        makeValue(key13, value13, database);
+        makeValue(key14, value14, database);
+        closeObject(database);
+    }
 
     public static boolean checkExist(String key, String value, String database) {
         try {

@@ -1,4 +1,4 @@
-package nl.PROJ1.screens;
+package nl.PROJ1.screens.other;
 
 public class Prompt {
     public static final String ANSI_RESET = "\u001B[0m";

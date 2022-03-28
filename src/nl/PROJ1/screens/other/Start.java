@@ -1,4 +1,4 @@
-package nl.PROJ1.screens;
+package nl.PROJ1.screens.other;
 
 import java.util.Scanner;
 
