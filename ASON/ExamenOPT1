@@ -1,0 +1,57 @@
+"Vraag":"Hoe zet je iets op het scherm?",
+"Type":"mc",
+"Antwoord":"System.out.println();",
+"Fout1":"Print;",
+"Fout2":"Add;",
+"Fout3":"System.add.println();",
+"Fout4":"System.println();",
+
+"Vraag":"Klopt deze code? Int naam = “Arthur”;",
+"Type":"boolean",
+"Antwoord":"Nee",
+"Fout":"Ja",
+
+"Vraag":"Hoe noem je een speciale methode die wordt uitgevoerd tijdens het maken van een klasse?",
+"Type":"open",
+"Antwoord":"Constructor",
+
+"Vraag":"Wat is een stukje programma dat een bepaalde taak verricht?",
+"Type":"open",
+"Antwoord":"Methode",
+
+"Vraag":"Hoe maak je een object aan?",
+"Type":"mc",
+"Antwoord":"<Class naam> <naam> = new <class naam>();",
+"Fout1":"<class naam> <naam> = new <naam>();",
+"Fout2":"<naam> <class naam> = new <class naam>();",
+"Fout3":"<class naam> <naam> = new <class naam>;",
+"Fout4":"<naam> <naam> = new <class naam>;",
+
+"Vraag":"Hoe noem je x in de volgende code? int x = 18;",
+"Type":"open",
+"Antwoord":"Variabel",
+
+"Vraag":"Wat hoort bij encapsulation?",
+"Type":"mc",
+"Antwoord":"Set en get methodes",
+"Fout1":"Non-static",
+"Fout2":"String",
+"Fout3":"This()",
+"Fout4":"Class",
+
+"Vraag":"Waarmee test je Java code?",
+"Type":"open",
+"Antwoord":"JUnit",
+
+"Vraag":"Wat komt er uit deze code? System.out.println(“Hello world!”);",
+"Type":"open",
+"Antwoord":"Hello world!",
+
+"Vraag":"Wat hoort er wel bij acces modifiers?",
+"Type":"mc",
+"Antwoord":"Public",
+"Fout1":"String",
+"Fout2":"Class",
+"Fout3":"Integer",
+"Fout4":"System.out.println",
+
