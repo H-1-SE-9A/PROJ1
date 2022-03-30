@@ -16,7 +16,7 @@ public class StudentGeslaagdSpecExamen {
         Scanner scanner = new Scanner(System.in);
         int leerlingNummer = scanner.nextInt();
 
-        System.out.println("Is de student geslaagd voor een examen");
+        System.out.println("Is de student geslaagd voor een examen: ");
         if(!ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Resultaat1", "UserInformation").equals("null")) {
             System.out.println("1)    Resulaten " + getAlleexamens.get(0));
         }
@@ -29,8 +29,10 @@ public class StudentGeslaagdSpecExamen {
         if(!ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Resultaat4", "UserInformation").equals("null")) {
             System.out.println("4)    Resulaten " + getAlleexamens.get(3));
         }
-        System.out.println("5)    Terug");
-        System.out.println("6)    Log uit");
+
+        System.out.println("5)    Alle resultaten");
+        System.out.println("6)    Terug");
+        System.out.println("7)    Log uit");
         System.out.println("0)    Exit");
         System.out.println("");
         System.out.println("Maak uw keuze: ");
@@ -105,9 +107,17 @@ public class StudentGeslaagdSpecExamen {
                 }
             }
             case 5 -> {
-                return 3;
+                System.out.println("Dit zijn de cijfers van " + String.valueOf(leerlingNummer) + " van alle examens: ");
+                System.out.println( "Voor " + getAlleexamens.get(0) +  ": " + (ASON.getValue("Gebruikersnummer",String.valueOf(leerlingNummer), "Resultaat1", "UserInformation" )));
+                System.out.println( "Voor " + getAlleexamens.get(1) +  ":  " + (ASON.getValue("Gebruikersnummer",String.valueOf(leerlingNummer), "Resultaat2", "UserInformation" )));
+                System.out.println( "Voor " + getAlleexamens.get(2) +  ":  " + (ASON.getValue("Gebruikersnummer",String.valueOf(leerlingNummer), "Resultaat3", "UserInformation" )));
+                System.out.println( "Voor " + getAlleexamens.get(3) +  ":  " + (ASON.getValue("Gebruikersnummer",String.valueOf(leerlingNummer), "Resultaat4", "UserInformation" )));
+                return 12;
             }
             case 6 -> {
+                return 3;
+            }
+            case 7 -> {
                 return 1;
             }
             default -> System.out.println("Ongeldige keuze!");
