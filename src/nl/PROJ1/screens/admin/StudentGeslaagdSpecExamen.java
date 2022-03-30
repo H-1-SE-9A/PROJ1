@@ -54,7 +54,7 @@ public class StudentGeslaagdSpecExamen {
                     return 12;
                 }
                 else {
-                        System.out.println("Student is nog niet ingeschreven voor dit Examen!" );
+                        System.out.println("Student is nog niet ingeschreven voor dit Examen!");
                         return 12;
                     }
                 }
