@@ -2,6 +2,7 @@ package nl.PROJ1;
 
 import nl.PROJ1.screens.admin.AdminPortal;
 import nl.PROJ1.screens.admin.AdminStudentInschrijven;
+import nl.PROJ1.screens.admin.StudentGeslaagdSpecExamen;
 import nl.PROJ1.screens.other.Login;
 import nl.PROJ1.screens.other.Prompt;
 import nl.PROJ1.screens.other.Register;
@@ -40,7 +41,14 @@ public class Controller {
             case 9 -> screenStart();
             case 10 -> screenAdminStudentInschrijven();
             case 11 -> examenAfnemen();
+            case 12 -> StudentGeslaagdSpecExamen();
         }
+    }
+
+    private static void StudentGeslaagdSpecExamen() {
+        screenNumber = StudentGeslaagdSpecExamen.startStudentGeslaagdSpecExamen();
+        Prompt.promptLine();
+        checkScreen();
     }
 
     private static void examenAfnemen() {
