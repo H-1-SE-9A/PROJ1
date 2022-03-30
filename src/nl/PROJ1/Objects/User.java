@@ -69,7 +69,4 @@ public class User {
         alleExamens = ASON.stripValue("Examen", "Examenlijsten");
         return alleExamens;
     }
-    public String getGebruikersnummer(){
-        return gebruikersnummer;
-    }
 }
