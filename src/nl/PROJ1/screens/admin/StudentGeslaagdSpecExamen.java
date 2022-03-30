@@ -36,7 +36,6 @@ public class StudentGeslaagdSpecExamen {
         System.out.println("Maak uw keuze: ");
 
 
-
         int choise = scanner.nextInt();
 
 
@@ -47,9 +46,9 @@ public class StudentGeslaagdSpecExamen {
             case 1 -> {
                 int parseInt1 = Integer.parseInt((ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Resultaat1", "UserInformation")));
                 if (ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Ingeschreven1", "UserInformation").equals("True")) {
-                    System.out.println("Dit zijn de cijfers van " + String.valueOf(leerlingNummer) + " voor "+ getAlleexamens.get(0) +  ": " + (ASON.getValue("Gebruikersnummer",String.valueOf(leerlingNummer), "Resultaat1", "UserInformation" )));
+                    System.out.println("Dit zijn de cijfers van " + String.valueOf(leerlingNummer) + " voor " + getAlleexamens.get(0) +  ": " + (ASON.getValue("Gebruikersnummer",String.valueOf(leerlingNummer), "Resultaat1", "UserInformation" )));
                     if (parseInt1 >= 5.5){
-                        System.out.println("Student is geslaagd voor dit examen!");
+                        System.out.println((ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Voornaam", "UserInformation")) + " " + (ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Achternaam", "UserInformation")) +" is geslaagd voor dit examen!");
 
                     }
                     return 12;
@@ -62,9 +61,9 @@ public class StudentGeslaagdSpecExamen {
             case 2 -> {
                 int parseInt2 = Integer.parseInt((ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Resultaat2", "UserInformation")));
                 if (ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Ingeschreven2", "UserInformation").equals("True")) {
-                    System.out.println("Dit zijn de cijfers van " + String.valueOf(leerlingNummer) + " voor "+ getAlleexamens.get(1) +  ": " + (ASON.getValue("Gebruikersnummer",String.valueOf(leerlingNummer), "Resultaat2", "UserInformation" )));
+                    System.out.println("Dit zijn de cijfers van " + String.valueOf(leerlingNummer) + " " + (ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Voornaam", "UserInformation")) + " " + (ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Achternaam", "UserInformation")) + " voor "+ getAlleexamens.get(1) +  ": " + (ASON.getValue("Gebruikersnummer",String.valueOf(leerlingNummer), "Resultaat2", "UserInformation" )));
                     if (parseInt2 >= 5.5){
-                        System.out.println("Student is geslaagd voor dit examen!");
+                        System.out.println((ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Voornaam", "UserInformation")) + " " + (ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Achternaam", "UserInformation")) +"  is geslaagd voor dit examen!");
 
                     }
                     return 12;
@@ -77,9 +76,9 @@ public class StudentGeslaagdSpecExamen {
             case 3 -> {
                 int parseInt3 = Integer.parseInt((ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Resultaat3", "UserInformation")));
                 if (ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Ingeschreven3", "UserInformation").equals("True")) {
-                    System.out.println("Dit zijn de cijfers van " + String.valueOf(leerlingNummer) + " voor "+ getAlleexamens.get(2) +  ": " + (ASON.getValue("Gebruikersnummer",String.valueOf(leerlingNummer), "Resultaat3", "UserInformation" )));
+                    System.out.println("Dit zijn de cijfers van " + String.valueOf(leerlingNummer) + " " + (ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Voornaam", "UserInformation")) + " " + (ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Achternaam", "UserInformation")) + " voor "+ getAlleexamens.get(2) +  ": " + (ASON.getValue("Gebruikersnummer",String.valueOf(leerlingNummer), "Resultaat3", "UserInformation" )));
                     if (parseInt3 >= 5.5){
-                        System.out.println("Student is geslaagd voor dit examen!");
+                        System.out.println((ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Voornaam", "UserInformation")) + " " + (ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Achternaam", "UserInformation")) +"  is geslaagd voor dit examen!");
 
                     }
                     return 12;
@@ -93,9 +92,9 @@ public class StudentGeslaagdSpecExamen {
             case 4 ->{
                 int parseInt4 = Integer.parseInt((ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Resultaat4", "UserInformation")));
                 if (ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Ingeschreven4", "UserInformation").equals("True")) {
-                    System.out.println("Dit zijn de cijfers van " + String.valueOf(leerlingNummer) +  " voor "+ getAlleexamens.get(3) +  ": " +(ASON.getValue("Gebruikersnummer",String.valueOf(leerlingNummer), "Resultaat4", "UserInformation" )));
+                    System.out.println("Dit zijn de cijfers van " + String.valueOf(leerlingNummer) + " " + (ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Voornaam", "UserInformation")) + " " + (ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Achternaam", "UserInformation")) +  " voor "+ getAlleexamens.get(3) +  ": " +(ASON.getValue("Gebruikersnummer",String.valueOf(leerlingNummer), "Resultaat4", "UserInformation" )));
                     if (parseInt4 >= 5.5){
-                        System.out.println("Student is geslaagd voor dit examen!");
+                        System.out.println((ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Voornaam", "UserInformation")) + " " + (ASON.getValue("Gebruikersnummer", String.valueOf(leerlingNummer), "Achternaam", "UserInformation")) +"  is geslaagd voor dit examen!");
 
                     }
                     return 12;
