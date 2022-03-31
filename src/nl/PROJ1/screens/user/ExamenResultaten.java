@@ -1,5 +1,7 @@
 package nl.PROJ1.screens.user;
+import nl.PROJ1.ASON;
 import nl.PROJ1.Objects.User;
+import nl.PROJ1.screens.other.Login;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -13,9 +15,9 @@ public class ExamenResultaten {
         this.ingeschrevenExamens = ingeschrevenExamens;
         this.examenResultaten = examenResultaten;
         this.isStudentIngeschreven = isStudentIngeschreven;
-
     }
     public static int startExamenResultaten() {
+
         int counter = 1;
         for(int i = 0; i < ingeschrevenExamens.size(); i++){
             System.out.println(counter + ") " + ingeschrevenExamens.get(i));
@@ -38,6 +40,8 @@ public class ExamenResultaten {
             else if(choice == 0){
                 return 2;
             }
+
+
 
         }
 
