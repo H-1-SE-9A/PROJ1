@@ -2,6 +2,7 @@ package nl.PROJ1;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ASON {
     private static void makeValue(String key, String value, String database) {
@@ -171,7 +172,21 @@ public class ASON {
         }
         return list;
     }
+    public static ArrayList<String> striptArray(String privateKey,String keyValue,String key, String database){
 
+        String[] First;
+        ArrayList<String> x = new ArrayList<>();
+        ArrayList<String> y = new ArrayList<>();
+        x = ASON.stripValue(privateKey, database);
+        for (int i = 0; i < x.size(); i++) {
+            if (x.get(i).equals(keyValue)) {
+                x = ASON.stripValue(key, database);
+                First = x.get(i).split(" - ");
+                y.addAll(Arrays.asList(First));
+            }
+        }
+        return y;
+    }
     private static void copyTempTo(String database) {
         try {
             FileWriter fileWriter = new FileWriter("ASON/" + database);
