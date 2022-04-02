@@ -22,22 +22,9 @@ public class User {
                 voornaam = x.get(i);
                 x = ASON.stripValue("Achternaam", "Userinformation");
                 achternaam = x.get(i);
-                x = ASON.stripValue("Examen1", "Userinformation");
-                ingeschrevenExamens.add(x.get(i));
-                x = ASON.stripValue("Examen2", "Userinformation");
-                ingeschrevenExamens.add(x.get(i));
-                x = ASON.stripValue("Examen3", "Userinformation");
-                ingeschrevenExamens.add(x.get(i));
-                x = ASON.stripValue("Examen4", "Userinformation");
-                ingeschrevenExamens.add(x.get(i));
-                x = ASON.stripValue("Resultaat1", "Userinformation");
-                examenResultaten.add(x.get(i));
-                x = ASON.stripValue("Resultaat2", "Userinformation");
-                examenResultaten.add(x.get(i));
-                x = ASON.stripValue("Resultaat3", "Userinformation");
-                examenResultaten.add(x.get(i));
-                x = ASON.stripValue("Resultaat4", "Userinformation");
-                examenResultaten.add(x.get(i));
+                ingeschrevenExamens = ASON.striptArray("Gebruikersnummer", gebruikersnummer, "Examen", "UserInformation");
+                examenResultaten = ASON.striptArray("Gebruikersnummer", gebruikersnummer, "Resultaat", "UserInformation");
+
                 x = ASON.stripValue("Ingeschreven1", "Userinformation");
                 isStudentIngeschreven.add(x.get(i));
                 x = ASON.stripValue("Ingeschreven2", "Userinformation");
@@ -49,24 +36,31 @@ public class User {
             }
         }
     }
+
     // Deze methode moet een arraylist returnen
     // Deze functie moet naar het scherm examenResultaten
     public static ArrayList<String> getResultaten() {
         return examenResultaten;
     }
+
     // returnt nu de examens uit Userinformation ("Examen1", "Examen2")
-    public static ArrayList<String> getIngeschrevenExamens(){
+    public static ArrayList<String> getIngeschrevenExamens() {
         return ingeschrevenExamens;
     }
 
-    public static ArrayList<String> getIsStudentIngeschreven(){
+    public static ArrayList<String> getIsStudentIngeschreven() {
         return isStudentIngeschreven;
     }
 
     // returnt ArrayList alleExamens met alle examens uit database ExamenLijsten
-    public static ArrayList<String>getAlleExamens(){
+    public static ArrayList<String> getAlleExamens() {
         ArrayList<String> alleExamens;
         alleExamens = ASON.stripValue("Examen", "Examenlijsten");
         return alleExamens;
+    }
+
+    public String getGebruikersnummer() {
+
+        return gebruikersnummer;
     }
 }

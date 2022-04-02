@@ -2,6 +2,7 @@ package nl.PROJ1;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ASON {
     private static void makeValue(String key, String value, String database) {
@@ -47,7 +48,8 @@ public class ASON {
         makeValue(key3, value3, database);
         closeObject(database);
     }
-    public static void makeObject(String key1, String value1, String key2, String value2, String key3, String value3,String key4, String value4, String key5, String value5, String key6, String value6,String key7, String value7, String key8, String value8, String key9, String value9,String key10, String value10, String key11, String value11, String key12, String value12, String key13, String value13, String key14, String value14, String database) {
+
+    public static void makeObject(String key1, String value1, String key2, String value2, String key3, String value3, String key4, String value4, String key5, String value5, String key6, String value6, String key7, String value7, String key8, String value8, String key9, String value9, String key10, String value10, String key11, String value11, String key12, String value12, String key13, String value13, String key14, String value14, String database) {
         makeValue(key1, value1, database);
         makeValue(key2, value2, database);
         makeValue(key3, value3, database);
@@ -170,7 +172,21 @@ public class ASON {
         }
         return list;
     }
+    public static ArrayList<String> striptArray(String privateKey,String keyValue,String key, String database){
 
+        String[] First;
+        ArrayList<String> x = new ArrayList<>();
+        ArrayList<String> y = new ArrayList<>();
+        x = ASON.stripValue(privateKey, database);
+        for (int i = 0; i < x.size(); i++) {
+            if (x.get(i).equals(keyValue)) {
+                x = ASON.stripValue(key, database);
+                First = x.get(i).split(" - ");
+                y.addAll(Arrays.asList(First));
+            }
+        }
+        return y;
+    }
     private static void copyTempTo(String database) {
         try {
             FileWriter fileWriter = new FileWriter("ASON/" + database);
@@ -291,4 +307,5 @@ public class ASON {
         }
         return "Null";
     }
+
 }
