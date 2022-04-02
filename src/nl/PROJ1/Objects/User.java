@@ -25,14 +25,6 @@ public class User {
                 ingeschrevenExamens = ASON.striptArray("Gebruikersnummer", gebruikersnummer, "Examen", "UserInformation");
                 examenResultaten = ASON.striptArray("Gebruikersnummer", gebruikersnummer, "Resultaat", "UserInformation");
 
-                x = ASON.stripValue("Ingeschreven1", "Userinformation");
-                isStudentIngeschreven.add(x.get(i));
-                x = ASON.stripValue("Ingeschreven2", "Userinformation");
-                isStudentIngeschreven.add(x.get(i));
-                x = ASON.stripValue("Ingeschreven3", "Userinformation");
-                isStudentIngeschreven.add(x.get(i));
-                x = ASON.stripValue("Ingeschreven4", "Userinformation");
-                isStudentIngeschreven.add(x.get(i));
             }
         }
     }
@@ -62,5 +54,8 @@ public class User {
     public String getGebruikersnummer() {
 
         return gebruikersnummer;
+
+
+
     }
 }

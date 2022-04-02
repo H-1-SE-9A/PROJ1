@@ -1,4 +1,5 @@
 package nl.PROJ1.screens.user;
+
 import nl.PROJ1.ASON;
 import nl.PROJ1.Objects.User;
 import nl.PROJ1.screens.other.Login;
@@ -11,15 +12,16 @@ public class ExamenResultaten {
     public static ArrayList<String> examenResultaten = User.getResultaten();
     public static ArrayList<String> isStudentIngeschreven = User.getIsStudentIngeschreven();
 
-    public ExamenResultaten(ArrayList<String> ingeschrevenExamens, ArrayList<String> examenResultaten, ArrayList<String> isStudentIngeschreven){
+    public ExamenResultaten(ArrayList<String> ingeschrevenExamens, ArrayList<String> examenResultaten, ArrayList<String> isStudentIngeschreven) {
         this.ingeschrevenExamens = ingeschrevenExamens;
         this.examenResultaten = examenResultaten;
         this.isStudentIngeschreven = isStudentIngeschreven;
     }
+
     public static int startExamenResultaten() {
 
         int counter = 1;
-        for(int i = 0; i < ingeschrevenExamens.size(); i++){
+        for (int i = 0; i < ingeschrevenExamens.size(); i++) {
             System.out.println(counter + ") " + ingeschrevenExamens.get(i));
             counter++;
         }
@@ -29,24 +31,18 @@ public class ExamenResultaten {
 
         for (int i = 0; i < counter; i++) {
             if ((choice - 1) == i) {
-            String str = ingeschrevenExamens.get(i);
+                String str = ingeschrevenExamens.get(i);
                 System.out.println("bekende resultaten voor dit examen zijn : ");
-                for (int j = 0; j<examenResultaten.size(); j++){
-                    if (examenResultaten.get(j).startsWith(str)){
+                for (int j = 0; j < examenResultaten.size(); j++) {
+                    if (examenResultaten.get(j).startsWith(str)) {
                         System.out.println(examenResultaten.get(j));
                     }
                 }
-            }
-            else if(choice == 0){
+            } else if (choice == 0) {
                 return 2;
             }
-
-
-
         }
 
-            return 4;
-        }
-
-
+        return 4;
+    }
 }

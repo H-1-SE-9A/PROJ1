@@ -105,7 +105,7 @@ public class Controller {
         checkScreen();
     }
     private static void ingeschrevenStudentPerExamen(){
-        screenNumber = LijstIngeschrevenStudentPerExamen.lijstIngeschrevenStudentenPerExamen();
+        screenNumber = LijstIngeschrevenStudentPerExamen.ingeschrevenStudentPerExamen();
         Prompt.promptLine();
         checkScreen();
     }

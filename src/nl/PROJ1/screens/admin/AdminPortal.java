@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class AdminPortal {
     public static int startAdminPortal() {
-        System.out.println("1)    Resultaten\n2)    Voortgang\n3)    Student Inschrijven\n4)    Loguit\n0)    Exit\n5)    Lijst van ingeschreven studenten per examen\n Maak uw keuze: ");
+        System.out.println("1)    Resultaten\n2)    Voortgang\n3)    Student Inschrijven\n4)    Lijst van ingeschreven studenten per examen\n5)    Loguit\n0)    Exit\n Maak uw keuze: ");
         Scanner scanner = new Scanner(System.in);
         int choise = scanner.nextInt();
 
@@ -22,13 +22,12 @@ public class AdminPortal {
                 return 10;
             }
             case 4 -> {
-                return 1;
-            }
-            case 5 -> {
                 return 13;
             }
+            case 5 -> {
+                return 1;
+            }
             default -> System.out.println("Ongeldige keuze!");
-
         }
         return 2;
     }
