@@ -1,5 +1,7 @@
 package nl.PROJ1.screens.user;
+import nl.PROJ1.ASON;
 import nl.PROJ1.Objects.User;
+import nl.PROJ1.screens.other.Login;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -13,45 +15,38 @@ public class ExamenResultaten {
         this.ingeschrevenExamens = ingeschrevenExamens;
         this.examenResultaten = examenResultaten;
         this.isStudentIngeschreven = isStudentIngeschreven;
-
     }
     public static int startExamenResultaten() {
-        System.out.println("1)    " + ingeschrevenExamens.get(0) +  "\n2)    " + ingeschrevenExamens.get(1) +  "\n3)    " + ingeschrevenExamens.get(2) +  "\n4)    " + ingeschrevenExamens.get(3) +  "\n5)    Logout\n0)    Exit\n\n Maak uw keuze: ");
+
+        int counter = 1;
+        for(int i = 0; i < ingeschrevenExamens.size(); i++){
+            System.out.println(counter + ") " + ingeschrevenExamens.get(i));
+            counter++;
+        }
+        System.out.println("0) Return");
         Scanner scanner = new Scanner(System.in);
-        int choise = scanner.nextInt();
-        switch (choise){
-            case 0 -> {
-                return 0;
+        int choice = scanner.nextInt();
+
+        for (int i = 0; i < counter; i++) {
+            if ((choice - 1) == i) {
+            String str = ingeschrevenExamens.get(i);
+                System.out.println("bekende resultaten voor dit examen zijn : ");
+                for (int j = 0; j<examenResultaten.size(); j++){
+                    if (examenResultaten.get(j).startsWith(str)){
+                        System.out.println(examenResultaten.get(j));
+                    }
+                }
             }
-            case 1 -> {
-                System.out.println("Resultaat Examenscrum: " + examenResultaten.get(0));
+            else if(choice == 0){
                 return 2;
             }
-            case 2 -> {
-                System.out.println("Resultaat ExamenOPT1: " + examenResultaten.get(1));
-                return 2;
-            }
-            case 3 -> {
-                System.out.println("Resultaat ExamenOPT2: " + examenResultaten.get(2));
-                return 2;
-            }
-            case 4 -> {
-                System.out.println("Resultaat ExamenOPT3: " + examenResultaten.get(3));
-                return 2;
-            }
-            case 5 -> {
-                return 1;
-            }
-            default -> {System.out.println("Ongeldige keuze!");}
-            }
-            return 2;
+
+
+
         }
 
-    public void showResultaten() {
-        int count = 0;
-        for (String naam : ingeschrevenExamens) {
-            System.out.println(naam + " " + examenResultaten.get(count));
-            count++;
+            return 4;
         }
-    }
+
+
 }
