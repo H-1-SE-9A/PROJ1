@@ -80,29 +80,25 @@ public class StudentGeslaagdSpecExamen {
                     }
 
                 }
-            } else if (choice == secondCounter +1) {
+            } else if (choice == secondCounter + 1) {
 
-                    for(int j = 0; j < gemaaktExamens.size(); j++){
-                        for(int l = 0; l < examenResultaten.size(); l++){
-                            String str = gemaaktExamens.get(j);
-                            if(examenResultaten.get(l).contains(str)){
-                                System.out.println("voor (" + str + ") heeft de leerling " + ASON.striptResultaat(examenResultaten.get(l)) + " gescoord");
-                            }
+                for (int j = 0; j < gemaaktExamens.size(); j++) {
+                    for (int l = 0; l < examenResultaten.size(); l++) {
+                        String str = gemaaktExamens.get(j);
+                        if (examenResultaten.get(l).contains(str)) {
+                            System.out.println("voor (" + str + ") heeft de leerling " + ASON.striptResultaat(examenResultaten.get(l)) + " gescoord");
                         }
                     }
+                }
 
 
-            }
-            else if(choice == (secondCounter + 2)){
+            } else if (choice == (secondCounter + 2)) {
                 return 3;
-            }
-            else if(choice == (secondCounter + 3)){
+            } else if (choice == (secondCounter + 3)) {
                 return 1;
-            }
-            else if(choice == 0){
+            } else if (choice == 0) {
                 return 0;
             }
-
 
 
 //        switch (choice) {
@@ -190,4 +186,5 @@ public class StudentGeslaagdSpecExamen {
 
 
         return 3;
-    }}
+    }
+}
