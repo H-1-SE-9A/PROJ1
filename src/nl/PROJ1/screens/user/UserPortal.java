@@ -25,6 +25,7 @@ public class UserPortal {
             case 4 -> {
                 return 1;
             }
+
             default -> {System.out.println("Ongeldige keuze!");}
 
         }
