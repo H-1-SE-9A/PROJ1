@@ -187,6 +187,15 @@ public class ASON {
         }
         return y;
     }
+    public static String striptResultaat(String resultaat){
+
+        String[] First = resultaat.split(" = ");
+        ArrayList<String> y = new ArrayList<>();
+        String part1 = First[0];
+        String part2 = First[1];
+
+        return part2;
+    }
     private static void copyTempTo(String database) {
         try {
             FileWriter fileWriter = new FileWriter("ASON/" + database);

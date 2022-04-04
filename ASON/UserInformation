@@ -2,7 +2,7 @@
 "Voornaam":"Arthur",
 "Achternaam":"Djamardzhashvili",
 "Examen":"ExamenScrum - ExamenOPT2 - ExamenOPT1 - ExamenOPT5 - ExamenOPT3",
-"Resultaat":"ExamenScrum = 5 - ExamenScrum = 9 - ExamenOPT2 = 8",
+"Resultaat":"ExamenScrum = 9 - ExamenScrum = 5 - ExamenOPT2 = 8 - ExamenOPT3 = 9",
 
 "Gebruikersnummer":"21101043",
 "Voornaam":"Alex",
@@ -50,4 +50,3 @@
 "Examen4":"ExamenOPT3",
 "Ingeschreven4":"False",
 "Resultaat4":"null",
-
