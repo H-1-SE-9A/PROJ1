@@ -160,7 +160,7 @@ public class ASON {
             String line = bufferdReader.readLine();
 
             while (line != null) {
-                if (line.contains(key)) {
+                if (line.contains("\""+ key + "\"")) {
                     String[] extraction = line.split(":");
                     extraction = extraction[1].split("\"");
                     list.add(extraction[1]);
@@ -172,6 +172,7 @@ public class ASON {
         }
         return list;
     }
+
     public static ArrayList<String> striptArray(String privateKey,String keyValue,String key, String database){
 
         String[] First;
