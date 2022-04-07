@@ -1,10 +1,10 @@
 package nl.PROJ1.screens.user;
 
+import nl.PROJ1.Objects.BerekenCijferNumering;
 import nl.PROJ1.Objects.Examen;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
 import java.util.Scanner;
 
 public class ExamenAfnemen {
@@ -96,6 +96,9 @@ public class ExamenAfnemen {
             if(counter == 10){
                 System.out.println("je totale punten voor dit examen zijn: " + punten);
                 System.out.println("Dit examen bestond uit: " + (counter) + " vragen");
+                System.out.println("Wat is de nummering? (n-term, met een komma)");
+                double numering = scanner.nextDouble();
+                BerekenCijferNumering.geslaagdPlusCijfer(punten,counter,numering);
                 afgelopen = true;
             }
 
