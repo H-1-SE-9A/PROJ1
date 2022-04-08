@@ -1,0 +1,43 @@
+"Vraag":"Maakt de volgorde van de product backlog iets uit?",
+"Type":"gesloten",
+"Antwoord":"true"
+
+"Vraag":"Hoe noem je een verzameling stories die samen een bepaalde functionaliteit realiseren?",
+"Type":"open",
+"Antwoord":"Epic"
+
+"Vraag":"Hoe noem je een werk periode van een aantal weken? (meestal 2)",
+"Type":"open",
+"Antwoord":"Sprint"
+
+"Vraag":"Wat is de goede volgorde van het scrumbord?",
+"Type":"meerkeuze",
+"Antwoord":"To do – In progress – Testing – Done",
+"Fout1":"To do > In progress > Done > Testing-In progress > To do > Testing > Done-To do > Testing > In progress > Done-Done > Testing > In progress > To do"
+
+"Vraag":"Hoe noem je een lijst met user stories die nog niet zijn gerealiseerd?",
+"Type":"open",
+"Antwoord":"Product Backlog"
+
+"Vraag":"Waar staat het kaartje met het kopje voor in de planning poker?",
+"Type":"meerkeuze",
+"Antwoord":"Diegene heeft een pauze nodig",
+"Fout":"Diegene heeft zin in koffie-Dit geldt voor een Joker-Diegene heeft zin in thee-Diegene gaat een koffiezetapparaat kopen"
+
+"Vraag":"Is de format als <rol> wil ik <wens> om <reden> een goede opbouw voor een user story?",
+"Type":"gesloten",
+"Antwoord":"true"
+
+"Vraag":"Waarom zijn de sprints zo kort?",
+"Type":"meerkeuze",
+"Antwoord":"Zo krijg je zo vroeg mogelijk feedback",
+"Fout":"Zo krijg je het project sneller af-Zo kan je meer vrij nemen-Zo hoef je niet veel te plannen-Zo kan je sneller weer planning poker spelen"
+
+"Vraag":"Wie vertegenwoordigt de opdrachtgever en de gebruikers?",
+"Type":"open",
+"Antwoord":"Product Owner"
+
+"Vraag":"Wat doe je als je een sprint hebt afgerond?",
+"Type":"open",
+"Antwoord":"Retrospective"
+

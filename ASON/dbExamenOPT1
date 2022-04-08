@@ -1,0 +1,44 @@
+"Vraag":"Hoe zet je iets op het scherm?",
+"Type":"meerkeuze",
+"Antwoord":"System.out.println();",
+"Fout":"Print;-Add;-System.add.println();-System.println();"
+
+"Vraag":"Klopt deze code? Int naam = “Arthur”;",
+"Type":"gesloten",
+"Antwoord":"false",
+
+"Vraag":"Hoe noem je een speciale methode die wordt uitgevoerd tijdens het maken van een klasse?",
+"Type":"open",
+"Antwoord":"Constructor"
+
+"Vraag":"Wat is een stukje programma dat een bepaalde taak verricht?",
+"Type":"open",
+"Antwoord":"Methode"
+
+"Vraag":"Hoe maak je een object aan?",
+"Type":"meerkeuze",
+"Antwoord":"<class naam> <naam> = new <class naam>();",
+"Fout":"<class naam> <naam> = new <naam>();-<naam> <class naam> = new <class naam>();-<class naam> <naam> = new <class naam>;-<naam> <naam> = new <class naam>;"
+
+"Vraag":"Hoe noem je x in de volgende code? int x = 18;",
+"Type":"open",
+"Antwoord":"Variabel"
+
+"Vraag":"Wat hoort bij encapsulation?",
+"Type":"meerkeuze",
+"Antwoord":"Set en get methodes",
+"Fout":"Static-String-This()-Class"
+
+"Vraag":"Waarmee test je Java code?",
+"Type":"open",
+"Antwoord":"JUnit"
+
+"Vraag":"Wat komt er uit deze code? System.out.println(“Hello world!”);",
+"Type":"open",
+"Antwoord":"Hello world!"
+
+"Vraag":"Wat hoort er wel bij acces modifiers?",
+"Type":"meerkeuze",
+"Antwoord":"Public",
+"Fout":"String-Class-Integer-System.out.println"
+
