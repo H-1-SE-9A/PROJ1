@@ -1,6 +1,6 @@
 package initUser;
 
-import nl.ardemium.*;
+import nl.proj1.*;
 
 public class Login {
 
@@ -8,6 +8,8 @@ public class Login {
         String gebruikersnummer = "";
         String wachtwoord = "";
         boolean pending = true;
+        Prompt.promptLine();
+        System.out.println("Welkom bij quiz master!");
 
         while (pending) {
             System.out.println("Voer uw gebruikersnummer in:");

@@ -1,7 +1,8 @@
-package nl.ardemium;
+package nl.proj1;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ASON {
     private static void makeValue(String key, String value, String database) {
@@ -155,8 +156,11 @@ public class ASON {
                 fileWriter.append("\n");
 
                 line = bufferdReader.readLine();
+
+
             }
             fileWriter.close();
+
         } catch (
                 IOException e) {
             e.printStackTrace();
@@ -200,13 +204,18 @@ public class ASON {
     }
 
     public static ArrayList<String> getArrayValue(String privateKey, String keyValue, String key, String database){
-        ArrayList<String> arrayList = new ArrayList<>();
-        String value = getValue(privateKey,keyValue,key,database);
-        String[] array  = value.split("-");
-        for(String a : array){
-            arrayList.add(a);
+        String[] First;
+        ArrayList<String> x = new ArrayList<>();
+        ArrayList<String> y = new ArrayList<>();
+        x = ASON.stripValue(privateKey, database);
+        for (int i = 0; i < x.size(); i++) {
+            if (x.get(i).equals(keyValue)) {
+                x = ASON.stripValue(key, database);
+                First = x.get(i).split("-");
+                y.addAll(Arrays.asList(First));
+            }
         }
-        return arrayList;
+        return y;
     }
 
     public static void addArrayValue(String privateKey, String keyValue, String key, String value, String database){

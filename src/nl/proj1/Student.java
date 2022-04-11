@@ -1,4 +1,4 @@
-package nl.ardemium;
+package nl.proj1;
 
 import java.util.ArrayList;
 
@@ -42,19 +42,24 @@ public class Student extends User {
     }
 
     public void examenAfnemen(Examen examen) {
+        Prompt.promptLine();
+        System.out.println(Prompt.ANSI_GREEN + "Welkom bij het examen " + examen.getNaam() + Prompt.ANSI_RESET);
         String resultaat = examen.maakExamen();
+
         ArrayList<String> nummers = ASON.stripValue("resultaatNummer","dbExamenResultaten");
         int laatstePositie = nummers.size()-1;
         int nummer = Integer.parseInt(nummers.get(laatstePositie))+1;
         ASON.makeObject("resultaatNummer", String.valueOf(nummer),"nummerGebruiker",super.getNummerGebruiker(),"examen",examen.getNaam(),"resultaat",resultaat,"dbExamenResultaten");
         ASON.addArrayValue("nummerGebruiker",super.getNummerGebruiker(),"resultaten",String.valueOf(nummer),"dbStudent");
         this.examenResultaten = initResultaten(super.getNummerGebruiker());
-        if(Double.parseDouble(resultaat) >= 5.5){
-            System.out.println("Gefeliciteerd! jij bent geslaagd voor " + examen.getNaam() +"!");
+
+
+        if(Double.parseDouble( resultaat.replace(",",".")) >= 5.5){
+            System.out.println( "\u001b[32;1m" + "Gefeliciteerd! jij bent geslaagd voor " + examen.getNaam() +"!" + Prompt.ANSI_RESET);
             System.out.println("Jouw cijfer is: " + resultaat);
         }
         else{
-            System.out.println("Helaas. jij bent niet geslaagd voor " + examen.getNaam() +".");
+            System.out.println( Prompt.ANSI_RED + "Helaas. jij bent niet geslaagd voor " + examen.getNaam() +"." + Prompt.ANSI_RESET);
             System.out.println("Jouw cijfer is: " + resultaat);
         }
     }

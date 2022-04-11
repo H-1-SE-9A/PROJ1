@@ -1,6 +1,6 @@
 package Navigation;
 
-import nl.ardemium.*;
+import nl.proj1.*;
 
 import java.util.ArrayList;
 
@@ -48,12 +48,14 @@ public class Controller {
     }
 
     private void screenExamenResultaten() {
+        Prompt.promptLine();
+        System.out.println(Prompt.ANSI_GREEN  + "Je hebt Examen Resultaten gekozen, selecteer hieronder een examen" + Prompt.ANSI_RESET);
         int counter = 1;
         for (Examen e : student.getIngeschrevenExamens()) {
             System.out.println(counter + ")" + e.getNaam());
             counter++;
         }
-        System.out.println("0) Exit");
+        System.out.println("0) Return");
 
         String input = Prompt.askInput();
         try {
@@ -70,13 +72,15 @@ public class Controller {
     }
 
     private void screenExamenAfnemen() {
+        Prompt.promptLine();
+        System.out.println(Prompt.ANSI_GREEN  + "Je hebt Examen ِafnemen gekozen, selecteer hieronder een examen" + Prompt.ANSI_RESET);
         int counter = 1;
         for (Examen e : student.getIngeschrevenExamens()) {
             System.out.println(counter + ")" + e.getNaam());
             counter++;
 
         }
-        System.out.println("0) Exit");
+        System.out.println("0) Return");
 
         String input = Prompt.askInput();
         try {
@@ -93,16 +97,25 @@ public class Controller {
     }
 
     private void screenInschrijvenExamen() {
+        Prompt.promptLine();
+        System.out.println(Prompt.ANSI_GREEN  + "Je hebt Inschrijven voor een examen gekozen, selecteer hieronder een examen" + Prompt.ANSI_RESET);
         int counter = 1;
         ArrayList<Examen> nietIngeschreven = new ArrayList<>();
-        for (Examen e : overzichtExamens) {
-            if(!student.getIngeschrevenExamens().contains(e)){
+        for(int i= 0; i< overzichtExamens.size(); i++){
+                Examen e = overzichtExamens.get(i);
+                boolean endState = false;
+                for (int j = 0; j < student.getIngeschrevenExamens().size(); j++){
+                    if(student.getIngeschrevenExamens().get(j).getNaam().equals(overzichtExamens.get(i).getNaam())){
+                        endState = true;
+                    }
+                }
+                if(!endState){
                 System.out.println(counter + ")" + e.getNaam());
                 nietIngeschreven.add(e);
-                counter++;
+                counter++;}
             }
-        }
-        System.out.println("0) Exit");
+
+        System.out.println("0) Return");
 
         String input = Prompt.askInput();
         try {
@@ -110,7 +123,10 @@ public class Controller {
             if (parseInput == 0) {
                 position = 1;
             } else {
+                Examen examen = nietIngeschreven.get(parseInput-1);
                 student.examenInschrijven(nietIngeschreven.get(parseInput-1));
+        System.out.println(Prompt.ANSI_GREEN  + "Je bent nu ingeschreven voor het examen " + examen.getNaam() +  Prompt.ANSI_RESET);
+
             }
         } catch (Exception e) {
             checkScreen();
@@ -119,12 +135,15 @@ public class Controller {
     }
 
     private void screenScorebordPerExamen() {
+        Prompt.promptLine();
+        System.out.println(Prompt.ANSI_GREEN + "Je hebt hoogste cijfers per specifieke examen gekozen, kies een examen hieronder" +  Prompt.ANSI_RESET);
+
         int counter = 1;
         for (Examen e : overzichtExamens) {
             System.out.println(counter + ")" + e.getNaam());
             counter++;
         }
-        System.out.println("0) Exit");
+        System.out.println("0) Return");
 
         String input = Prompt.askInput();
         try {
@@ -141,12 +160,15 @@ public class Controller {
     }
 
     private void screenResultatetnVanStudent() {
+        Prompt.promptLine();
+        System.out.println(Prompt.ANSI_GREEN + "Je hebt behaalde resultaten van een specifieke student gekozen, kies een student hieronder" +  Prompt.ANSI_RESET);
+
         int counter = 1;
         for (Student s : leraar.getOverzichtStudenten()) {
             System.out.println(counter + ")" + s.getNummerGebruiker());
             counter++;
         }
-        System.out.println("0) Exit");
+        System.out.println("0) Return");
 
         String input = Prompt.askInput();
         try {
@@ -163,12 +185,15 @@ public class Controller {
     }
 
     private void screenExamensPerStudent() {
+        Prompt.promptLine();
+        System.out.println(Prompt.ANSI_GREEN + "Je hebt examens per specifieke student gekozen, kies een student hieronder" +  Prompt.ANSI_RESET);
+
         int counter = 1;
         for (Student s : leraar.getOverzichtStudenten()) {
             System.out.println(counter + ")" + s.getNummerGebruiker());
             counter++;
         }
-        System.out.println("0) Exit");
+        System.out.println("0) return");
 
         String input = Prompt.askInput();
         try {
@@ -185,12 +210,15 @@ public class Controller {
     }
 
     private void screenStudentenPerExamen() {
+        Prompt.promptLine();
+        System.out.println(Prompt.ANSI_GREEN + "Je hebt studenten per specifieke examen gekozen, kies een examen hieronder" +  Prompt.ANSI_RESET);
+
         int counter = 1;
         for (Examen e : overzichtExamens) {
             System.out.println(counter + ")" + e.getNaam());
             counter++;
         }
-        System.out.println("0) Exit");
+        System.out.println("0) Return");
 
         String input = Prompt.askInput();
         try {
@@ -207,6 +235,8 @@ public class Controller {
     }
 
     private void screenAdminPortal() {
+        Prompt.promptLine();
+        System.out.println(Prompt.ANSI_GREEN + "Welkom bij admin portal!" +  Prompt.ANSI_RESET);
 
         System.out.printf("1) %s%n2) %s%n3) %s%n4) %s%n0) %s%n",
                 "Zie alle ingeschreven studenten voor een specifiek examen",
@@ -243,7 +273,8 @@ public class Controller {
     }
 
     private void screenUserPortal() {
-
+        Prompt.promptLine();
+        System.out.println(Prompt.ANSI_GREEN + "Welkom bij studenten portal!" +  Prompt.ANSI_RESET);
         System.out.printf("1) %s%n2) %s%n3) %s%n0) %s%n",
                 "Inschrijven voor een examen",
                 "Examen afnemen",

@@ -1,4 +1,4 @@
-package nl.ardemium;
+package nl.proj1;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -104,10 +104,15 @@ public class Examen {
     public String maakExamen() {
         ArrayList<Vraag> examen = schudExamen();
         int goedBeantwoord = 0;
+        int counter = 1;
         for (Vraag v : examen) {
+
+            System.out.print(Prompt.ANSI_CYAN + "Vraag " + counter + Prompt.ANSI_RESET);
+            counter++;
             if (v.getClass() == VraagMeerkeuzen.class) {
                 Random r = new Random();
                 System.out.printf("%n%s%n", v.getVraag());
+
                 int randomInterfal = r.nextInt(((VraagMeerkeuzen) v).getAntwoordFouten().size());
                 for (int i = 0; i < ((VraagMeerkeuzen) v).getAntwoordFouten().size() + 1; i++) {
                     if (i == randomInterfal) {
