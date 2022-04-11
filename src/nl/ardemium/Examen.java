@@ -138,7 +138,7 @@ public class Examen {
             } else if (v.getClass() == VraagGesloten.class) {
                 System.out.printf("%n%s%n", v.getVraag());
                 String s = Prompt.askInput();
-                if (((VraagGesloten) v).getAntwoord() == true && ((s.equalsIgnoreCase("ja") || s.equalsIgnoreCase("j") || s.equalsIgnoreCase("y") || s.equalsIgnoreCase("yes")) || (s.contains("nee") || s.contains("no")))) {
+                if (((VraagGesloten) v).getAntwoord() == true && ((s.equalsIgnoreCase("ja") || s.equalsIgnoreCase("j") || s.equalsIgnoreCase("y") || s.equalsIgnoreCase("yes")))) {
                     System.out.println("Goed!");
                     goedBeantwoord++;
                 } else if (((VraagGesloten) v).getAntwoord() == false && ((s.equalsIgnoreCase("nee") || s.equalsIgnoreCase("n") || s.equalsIgnoreCase("no")) || (s.contains("nee") || s.contains("no")))) {
