@@ -1,14 +1,16 @@
-package nl.ardemium;
+package nl.proj1;
 
 import java.util.Scanner;
 
 public class Prompt {
 
     public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_CYAN = "\u001b[36m";
+    public static final String ANSI_GREEN = "\u001b[32m";
     public static final String ANSI_RED = "\u001b[31m";
 
     public static void promptLogo() {
-        System.out.println(ANSI_RED + "\nMM'\"\"\"\"\"`MMM M\"\"MMMMM\"\"M M\"\"M M\"\"\"\"\"\"\"\"`M    M\"\"\"\"\"`'\"\"\"`YM MMP\"\"\"\"\"\"\"MM MP\"\"\"\"\"\"`MM M\"\"\"\"\"\"\"\"M MM\"\"\"\"\"\"\"\"`M MM\"\"\"\"\"\"\"`MM \n" +
+        System.out.println(ANSI_GREEN + "\nMM'\"\"\"\"\"`MMM M\"\"MMMMM\"\"M M\"\"M M\"\"\"\"\"\"\"\"`M    M\"\"\"\"\"`'\"\"\"`YM MMP\"\"\"\"\"\"\"MM MP\"\"\"\"\"\"`MM M\"\"\"\"\"\"\"\"M MM\"\"\"\"\"\"\"\"`M MM\"\"\"\"\"\"\"`MM \n" +
                 "M  .mmm,  MM M  MMMMM  M M  M Mmmmmm   .M    M  mm.  mm.  M M' .mmmm  MM M  mmmmm..M Mmmm  mmmM MM  mmmmmmmM MM  mmmm,  M \n" +
                 "M  MMMMM  MM M  MMMMM  M M  M MMMMP  .MMM    M  MMM  MMM  M M         `M M.      `YM MMMM  MMMM M`      MMMM M'        .M \n" +
                 "M  MM  M  MM M  MMMMM  M M  M MMP  .MMMMM    M  MMM  MMM  M M  MMMMM  MM MMMMMMM.  M MMMM  MMMM MM  MMMMMMMM MM  MMMb. \"M \n" +
@@ -20,6 +22,9 @@ public class Prompt {
     public static String askInput() {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
+    }
+    public static void promptLine() {
+        System.out.println(ANSI_CYAN + "88888888 88888888 88888888 88888888 88888888 88888888 88888888 88888888 88888888 88888888 88888888 88888888 88888888 88888888" + ANSI_RESET);
     }
 
 

@@ -1,7 +1,7 @@
 package Register;
 
-import nl.ardemium.ASON;
-import nl.ardemium.Prompt;
+import nl.proj1.ASON;
+import nl.proj1.Prompt;
 
 import java.util.ArrayList;
 
@@ -16,25 +16,29 @@ public class Register {
         String wachtwoordHerhaling;
 
         while(pending) {
-            System.out.println("Voornaam: ");
+            Prompt.promptLine();
+            System.out.println(Prompt.ANSI_GREEN +"Welkom bij het registratie portaal. Volg de ondestaande stappen om een account aan te maken." + Prompt.ANSI_RESET);
+            System.out.println("Wat is uw voornaam?");
+            System.out.print("Voornaam: ");
             voornaam = Prompt.askInput();
             if (voornaam.equals("0")) {
                 return "0";
             }
-
-            System.out.println("Achternaam: ");
+            System.out.println("Wat is uw achternaam?");
+            System.out.print("Achternaam: ");
             achternaam = Prompt.askInput();
             if (achternaam.equals("0")) {
                 return "0";
             }
-
-            System.out.println("Wachtwoord: ");
+            System.out.println("Maak nu een nieuwe wachtwoord aan");
+            System.out.print("Wachtwoord: ");
             wachtwoord = Prompt.askInput();
             if (wachtwoord.equals("0")) {
                 return "0";
             }
 
-            System.out.println("Bevestig Wachtwoord: ");
+            System.out.println("Bevestig uw nieuwe wachtwoord: ");
+            System.out.print("Bevestig Wachtwoord: ");
             wachtwoordHerhaling = Prompt.askInput();
             if (wachtwoordHerhaling.equals("0")) {
                 return "0";

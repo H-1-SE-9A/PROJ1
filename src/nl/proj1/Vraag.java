@@ -1,4 +1,4 @@
-package nl.ardemium;
+package nl.proj1;
 
 public class Vraag {
     private String vraag;
